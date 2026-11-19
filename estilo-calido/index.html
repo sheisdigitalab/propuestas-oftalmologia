@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <script>(function(){var h=document.documentElement;h.classList.add("js");setTimeout(function(){if(!h.classList.contains("anim"))h.classList.add("no-anim")},2500)})()</script>
+<script src="../js/cita.js" defer></script>
 <script src="../js/animaciones.js" defer></script>
 <title>Propuesta web · Estilo cálido · Dra. Katia Sotelo</title>
 <meta name="description" content="Propuesta de diseño para la web de la Dra. Katia Sotelo. Las fotos y los datos son de ejemplo.">
@@ -172,8 +173,8 @@ footer nav[aria-label="Páginas"]{gap:0!important}
 .proc-steps{list-style:none;margin:0;padding:0}
 .proc-step{position:relative;padding:30px 0 34px}
 .proc-step::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:rgba(210,176,140,.55)}
-.proc-step h3{margin:0 0 12px;display:flex;align-items:baseline;gap:14px;font-size:20px;color:#FFFFFF}
-.proc-step h3 .n{color:#D2B08C;font-weight:700;min-width:1.2ch}
+.proc-step h3{margin:0 0 12px;font-size:20px;color:#FFFFFF}
+.proc-step h3 .n{display:inline-block;margin-right:10px;color:#D2B08C;font-weight:700;min-width:1.2ch}
 .proc-step p{margin:0;font-size:16px;line-height:1.7;color:#BFCFC8}
 .proc-cta{margin-top:8px}
 @media (max-width:900px){
@@ -186,6 +187,42 @@ footer nav[aria-label="Páginas"]{gap:0!important}
   html.js:not(.no-anim) .proc-step::before{transform:scaleX(0);transform-origin:left center;transition:transform 1s cubic-bezier(.22,.61,.36,1) calc(.3s + var(--i,0) * .5s)}
   html.js:not(.no-anim) .proc.is-drawn .proc-step::before{transform:none}
 }
+
+/* Caja de cita: huecos seleccionables */
+.days{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;text-align:center}
+.days button.day{font:inherit;color:#6E6358;background:#FFFFFF;border:1px solid #E5DBCD;border-radius:8px;padding:14px 4px;font-size:14px;line-height:1.35;cursor:pointer;min-height:56px}
+.days button.day b{color:#1E1B18}
+.days button.day.on{border:1.5px solid #24413A;background:#EEF2EF;color:#24413A}
+.days button.day:focus-visible{outline:3px solid #24413A;outline-offset:2px}
+@media (max-width:760px){.days button.day{padding:18px 8px;font-size:18px}}
+
+/* Enlaces hacia las páginas de la web */
+.more-link{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;min-height:44px;font-weight:600;font-size:16px;color:#24413A;text-decoration:none;border-bottom:1.5px solid #B5835A;padding-bottom:2px;margin-top:6px}
+.more-link:hover,.more-link:focus-visible{color:#8C5E3C}
+.proc-more{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-left:24px;font-weight:600;font-size:16px;color:#D2B08C;text-decoration:none;border-bottom:1.5px solid rgba(210,176,140,.6)}
+.proc-more:hover,.proc-more:focus-visible{color:#FAF6F0}
+@media (max-width:900px){.proc-cta{display:flex;flex-direction:column;align-items:stretch}.proc-more{margin:14px 0 0;justify-content:center;border-bottom:0;text-decoration:underline;text-underline-offset:4px}}
+
+/* Menú desplegable también en pantallas medianas (el menú tiene 5 páginas) */
+@media (min-width:901px) and (max-width:1100px){
+  .nav-toggle{display:inline-flex}
+  .hdr-cta{display:inline-flex}
+  #site-nav a.cta{display:none!important}
+  #site-nav{flex:1 1 100%!important;flex-direction:column!important;align-items:stretch!important;gap:0!important}
+  html.js #site-nav:not(.open){display:none!important}
+  #site-nav a{border-top:1px solid #E5DBCD;min-height:48px}
+  header .brand{flex:1 1 auto;min-width:0}
+}
+
+/* Opiniones */
+.rev-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.rev{margin:0;background:#FFFFFF;border:1px solid #E5DBCD;border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:22px}
+.rev blockquote{margin:0}
+.rev p{margin:0;font-size:18px;line-height:1.65;color:#2A2622}
+.rev figcaption{font-size:16px;color:#6E6358;display:flex;flex-direction:column;gap:2px}
+.rev figcaption strong{color:#24413A}
+.rev-note{margin:0;font-size:16px;color:#6E6358}
+@media (max-width:900px){.rev-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -216,10 +253,11 @@ footer nav[aria-label="Páginas"]{gap:0!important}
       <a class="hdr-cta btn1" href="#cita">Pedir cita</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menú"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#24413A" stroke-width="2" stroke-linecap="round"/></svg><span class="lbl">Menú</span></button>
       <nav id="site-nav" aria-label="Menú principal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; font-size: 15px; font-weight: 500;">
-        <a href="#cirugias" style="color: #2A2622; text-decoration: none;">Cirugías</a>
-        <a href="#seguridad" style="color: #2A2622; text-decoration: none;">Seguridad</a>
-        <a href="#sobre-mi" style="color: #2A2622; text-decoration: none;">Trayectoria</a>
-        <a href="#preguntas" style="color: #2A2622; text-decoration: none;">Preguntas</a>
+        <a href="../proxima-pagina.html?p=cataratas&amp;e=calido" style="color: #2A2622; text-decoration: none;">Cataratas</a>
+        <a href="../proxima-pagina.html?p=parpados&amp;e=calido" style="color: #2A2622; text-decoration: none;">Párpados</a>
+        <a href="../proxima-pagina.html?p=doctora&amp;e=calido" style="color: #2A2622; text-decoration: none;">La doctora</a>
+        <a href="../proxima-pagina.html?p=primera-visita&amp;e=calido" style="color: #2A2622; text-decoration: none;">Primera visita</a>
+        <a href="../proxima-pagina.html?p=preguntas&amp;e=calido" style="color: #2A2622; text-decoration: none;">Preguntas</a>
         <a class="cta btn1" href="#cita" style="display: inline-flex; align-items: center; gap: 8px; background: #24413A; color: #FFFFFF; text-decoration: none; padding: 13px 24px; border-radius: 6px; font-weight: 600; min-height: 48px; box-sizing: border-box;">Pedir cita</a>
       </nav>
     </div>
@@ -260,7 +298,7 @@ footer nav[aria-label="Páginas"]{gap:0!important}
       </div>
 
       <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 72px;">
-        <div data-reveal class="ph-box" style="flex: 1 1 440px; min-width: 0; height: 440px; border-radius: 6px; background: #E3D5C2; overflow: hidden;"><img class="photo" src="../img/p1-cataratas-1000.webp" srcset="../img/p1-cataratas-560.webp 560w, ../img/p1-cataratas-1000.webp 1000w" sizes="(min-width: 1240px) 540px, 100vw" width="1000" height="824" alt="Foto de muestra: la doctora examinando a un paciente con una lámpara de hendidura en la consulta" loading="lazy" decoding="async" style="object-position: center 45%;"></div>
+        <div data-reveal class="ph-box" style="flex: 1 1 440px; min-width: 0; height: 440px; border-radius: 6px; background: #E3D5C2; overflow: hidden;"><img class="photo" src="../img/p1-cataratas-1000.webp" srcset="../img/p1-cataratas-560.webp 560w, ../img/p1-cataratas-1000.webp 1000w" sizes="(min-width: 1240px) 540px, 100vw" width="1000" height="824" alt="Foto de muestra: paciente durante una exploración con lámpara de hendidura en la consulta" loading="lazy" decoding="async" style="object-position: center 45%;"></div>
         <div data-reveal style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
           <span style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 700; font-size: 20px; color: #8C5E3C;">01</span>
           <h3 class="t-lg" style="color: #1E1B18;">Cirugía de cataratas</h3>
@@ -270,7 +308,7 @@ footer nav[aria-label="Páginas"]{gap:0!important}
             <li style="padding: 14px 0; border-bottom: 1px solid #E5DBCD; font-size: 16px; display: flex; gap: 12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" stroke="#24413A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Lente intraocular elegida para tu caso</li>
             <li style="padding: 14px 0; border-bottom: 1px solid #E5DBCD; font-size: 16px; display: flex; gap: 12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" stroke="#24413A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Revisiones postoperatorias conmigo</li>
           </ul>
-          <a class="lnk" href="#cirugias" style="display: inline-flex; align-self: flex-start; align-items: center; gap: 8px; font-weight: 600; font-size: 16px; color: #24413A; text-decoration: none; min-height: 44px;">Información completa sobre cataratas
+          <a class="lnk" href="../proxima-pagina.html?p=cataratas&amp;e=calido" style="display: inline-flex; align-self: flex-start; align-items: center; gap: 8px; font-weight: 600; font-size: 16px; color: #24413A; text-decoration: none; min-height: 44px;">Información completa sobre cataratas
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="#24413A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
@@ -286,7 +324,7 @@ footer nav[aria-label="Páginas"]{gap:0!important}
             <li style="padding: 14px 0; border-bottom: 1px solid #E5DBCD; font-size: 16px; display: flex; gap: 12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" stroke="#24413A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Ptosis palpebral (párpado caído)</li>
             <li style="padding: 14px 0; border-bottom: 1px solid #E5DBCD; font-size: 16px; display: flex; gap: 12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" stroke="#24413A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Chalazión y lesiones del párpado</li>
           </ul>
-          <a class="lnk" href="#cirugias" style="display: inline-flex; align-self: flex-start; align-items: center; gap: 8px; font-weight: 600; font-size: 16px; color: #24413A; text-decoration: none; min-height: 44px;">Información completa sobre párpados
+          <a class="lnk" href="../proxima-pagina.html?p=parpados&amp;e=calido" style="display: inline-flex; align-self: flex-start; align-items: center; gap: 8px; font-weight: 600; font-size: 16px; color: #24413A; text-decoration: none; min-height: 44px;">Información completa sobre párpados
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="#24413A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
@@ -305,7 +343,7 @@ footer nav[aria-label="Páginas"]{gap:0!important}
         </div>
         <p style="font-size: 17px; line-height: 1.7; color: #BFCFC8; max-width: 420px;">Cada cirugía se planifica de forma individual y se realiza en Clínica Oftalmológica Sant Cugat, con todas las garantías.</p>
       </div>
-      <div class="proc" data-draw><div class="proc-photo"><img src="../img/p1-doctora-hero-1080.webp" srcset="../img/p1-doctora-hero-560.webp 560w, ../img/p1-doctora-hero-1080.webp 1080w" sizes="(max-width: 900px) 100vw, 40vw" width="1080" height="1500" alt="Foto de muestra: la doctora en su consulta, sonriendo con bata blanca" loading="lazy" decoding="async" style="object-position:center 20%"></div><div class="proc-body"><blockquote class="proc-quote">“Mi compromiso es que entiendas tu diagnóstico y llegues a la cirugía con total confianza.”</blockquote><ol class="proc-steps"><li class="proc-step" style="--i:0"><h3><span class="n">1</span><span>Diagnóstico preciso</span></h3><p>Empiezo con una exploración completa: agudeza visual, presión ocular y revisión del cristalino y del fondo de ojo con lámpara de hendidura. Con esas pruebas sabemos qué le pasa a tu ojo y por qué, antes de hablar de operar.</p></li><li class="proc-step" style="--i:1"><h3><span class="n">2</span><span>Información clara</span></h3><p>Te explico con calma qué técnica propongo, qué resultado puedes esperar y cuáles son los riesgos reales, con palabras sencillas. Decides tú, sin prisas, y resolvemos todas tus dudas antes de fijar la fecha.</p></li><li class="proc-step" style="--i:2"><h3><span class="n">3</span><span>Seguimiento personal</span></h3><p>Después de la cirugía te reviso yo misma al día siguiente, a la semana y al mes. Compruebo cómo cicatriza el ojo, ajustamos las gotas y la graduación, y puedes escribirnos ante cualquier molestia.</p></li></ol><div class="proc-cta"><a class="cta btn1 btn" href="#cita" style="display: inline-flex; align-items: center; gap: 8px; background: #FAF6F0; color: #24413A; text-decoration: none; padding: 13px 24px; border-radius: 6px; font-weight: 600; min-height: 48px; box-sizing: border-box;">Pedir cita</a></div></div></div>
+      <div class="proc" data-draw><div class="proc-photo"><img src="../img/p1-proceso-960.webp" srcset="../img/p1-proceso-560.webp 560w, ../img/p1-proceso-960.webp 960w" sizes="(max-width: 900px) 100vw, 40vw" width="960" height="1280" alt="Foto de muestra: detalle de una lámpara de hendidura y una mano en la consulta" loading="lazy" decoding="async"></div><div class="proc-body"><blockquote class="proc-quote">“Mi compromiso es que entiendas tu diagnóstico y llegues a la cirugía con total confianza.”</blockquote><ol class="proc-steps"><li class="proc-step" style="--i:0"><h3><span class="n">1</span> <span>Diagnóstico preciso</span></h3><p>Empiezo con una exploración completa: agudeza visual, presión ocular y revisión del cristalino y del fondo de ojo con lámpara de hendidura. Con esas pruebas sé qué le pasa a tu ojo y por qué, antes de hablar de operar.</p></li><li class="proc-step" style="--i:1"><h3><span class="n">2</span> <span>Información clara</span></h3><p>Te explico con calma qué técnica propongo, qué resultado puedes esperar y cuáles son los riesgos reales, con palabras sencillas. Decides tú, sin prisas, y resuelvo todas tus dudas antes de fijar la fecha.</p></li><li class="proc-step" style="--i:2"><h3><span class="n">3</span> <span>Seguimiento personal</span></h3><p>Después de la cirugía te reviso yo misma al día siguiente, a la semana y al mes. Compruebo cómo cicatriza el ojo, ajusto las gotas y la graduación, y puedes escribirme ante cualquier molestia.</p></li></ol><div class="proc-cta"><a class="cta btn1 btn" href="#cita" style="display: inline-flex; align-items: center; gap: 8px; background: #FAF6F0; color: #24413A; text-decoration: none; padding: 13px 24px; border-radius: 6px; font-weight: 600; min-height: 48px; box-sizing: border-box;">Pedir cita</a><a class="proc-more" href="../proxima-pagina.html?p=primera-visita&amp;e=calido">Cómo es la primera visita <span aria-hidden="true">→</span></a></div></div></div>
     </div>
   </section>
 
@@ -323,7 +361,20 @@ footer nav[aria-label="Páginas"]{gap:0!important}
           <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 16px 0; border-bottom: 1px solid #E5DBCD;"><dt style="flex: 0 0 160px; font-size: 14px; font-weight: 600; color: #6E6358;">Sociedades</dt><dd style="margin: 0; flex: 1 1 260px; font-size: 16px;">Sociedad Española de Oftalmología</dd></div>
           <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 16px 0; border-bottom: 1px solid #E5DBCD;"><dt style="flex: 0 0 160px; font-size: 14px; font-weight: 600; color: #6E6358;">Colegiada</dt><dd style="margin: 0; flex: 1 1 260px; font-size: 16px;">Nº 08/00000</dd></div>
         </dl>
+        <a class="more-link" href="../proxima-pagina.html?p=doctora&amp;e=calido">Conocer a la doctora <span aria-hidden="true">→</span></a>
       </div>
+    </div>
+  </section>
+
+  <!-- OPINIONES -->
+  <section id="opiniones" style="background: #F1E8DC;">
+    <div class="reviews" style="max-width: 1240px; margin: 0 auto; padding: 112px 40px; display: flex; flex-direction: column; gap: 48px;">
+      <div data-reveal style="display: flex; flex-direction: column; gap: 16px; max-width: 660px;">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #8C5E3C;">Opiniones</span>
+        <h2 style="color: #1E1B18;">Lo que cuentan quienes ya han confiado</h2>
+      </div>
+      <div data-stagger class="rev-grid"><figure class="rev"><blockquote><p>“Me explicó cada paso con calma y salí de la consulta sin dudas. A la semana ya veía los colores como hacía años.”</p></blockquote><figcaption><strong>Mercè, 68 años</strong><span>Cirugía de cataratas</span></figcaption></figure><figure class="rev"><blockquote><p>“Tenía miedo a la operación, pero fue rápida y sin dolor. La doctora me revisó al día siguiente y todo fue como me había explicado.”</p></blockquote><figcaption><strong>Josep, 72 años</strong><span>Cirugía de cataratas</span></figcaption></figure><figure class="rev"><blockquote><p>“Quería recuperar la mirada descansada sin que se notara. El resultado es natural y me trataron con mucho cuidado.”</p></blockquote><figcaption><strong>Núria, 59 años</strong><span>Cirugía de párpados</span></figcaption></figure></div>
+      <p class="rev-note">Opiniones de ejemplo</p>
     </div>
   </section>
 
@@ -333,12 +384,13 @@ footer nav[aria-label="Páginas"]{gap:0!important}
       <div data-reveal style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 18px;">
         <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #8C5E3C;">Preguntas frecuentes</span>
         <h2 style="color: #1E1B18;">Antes de tu cirugía</h2>
-        <p style="font-size: 17px; line-height: 1.7; color: #574D45;">Si tienes cualquier otra duda, la resolvemos en la consulta de valoración.</p>
+        <p style="font-size: 17px; line-height: 1.7; color: #574D45;">Si tienes cualquier otra duda, la resuelvo en la consulta de valoración.</p>
+        <a class="more-link" href="../proxima-pagina.html?p=preguntas&amp;e=calido">Ver todas las preguntas <span aria-hidden="true">→</span></a>
       </div>
       <div data-stagger style="flex: 2 1 560px; min-width: 0; display: flex; flex-direction: column; border-top: 1px solid #E5DBCD;">
         <div style="padding: 28px 0; border-bottom: 1px solid #E5DBCD; display: flex; flex-direction: column; gap: 10px;"><h3>¿La operación de cataratas duele?</h3><p style="font-size: 16px; line-height: 1.7; color: #574D45;">Se realiza con anestesia local y la mayoría de pacientes solo notan una ligera presión. Es ambulatoria: vuelves a casa el mismo día.</p></div>
-        <div style="padding: 28px 0; border-bottom: 1px solid #E5DBCD; display: flex; flex-direction: column; gap: 10px;"><h3>¿Cuándo es el momento de operarse?</h3><p style="font-size: 16px; line-height: 1.7; color: #574D45;">Cuando la catarata empieza a limitar tu día a día: leer, conducir o ver la televisión. Lo valoramos en consulta.</p></div>
-        <div style="padding: 28px 0; border-bottom: 1px solid #E5DBCD; display: flex; flex-direction: column; gap: 10px;"><h3>¿La cirugía de párpados es solo estética?</h3><p style="font-size: 16px; line-height: 1.7; color: #574D45;">No siempre. Un párpado caído puede reducir el campo de visión. En consulta valoramos si la indicación es funcional, estética o ambas.</p></div>
+        <div style="padding: 28px 0; border-bottom: 1px solid #E5DBCD; display: flex; flex-direction: column; gap: 10px;"><h3>¿Cuándo es el momento de operarse?</h3><p style="font-size: 16px; line-height: 1.7; color: #574D45;">Cuando la catarata empieza a limitar tu día a día: leer, conducir o ver la televisión. Lo valoro en consulta.</p></div>
+        <div style="padding: 28px 0; border-bottom: 1px solid #E5DBCD; display: flex; flex-direction: column; gap: 10px;"><h3>¿La cirugía de párpados es solo estética?</h3><p style="font-size: 16px; line-height: 1.7; color: #574D45;">No siempre. Un párpado caído puede reducir el campo de visión. En consulta valoro si la indicación es funcional, estética o ambas.</p></div>
         <div style="padding: 28px 0; border-bottom: 1px solid #E5DBCD; display: flex; flex-direction: column; gap: 10px;"><h3>¿Cómo es la recuperación?</h3><p style="font-size: 16px; line-height: 1.7; color: #574D45;">Depende de cada intervención. Antes de la cirugía te explico qué cuidados necesitarás y cuándo serán las revisiones.</p></div>
       </div>
     </div>
@@ -354,26 +406,22 @@ footer nav[aria-label="Páginas"]{gap:0!important}
         <div style="display: flex; flex-direction: column; border-top: 1px solid #D9CBB8; margin-top: 8px;">
           <div style="display: flex; gap: 16px; align-items: flex-start; padding: 18px 0; border-bottom: 1px solid #D9CBB8;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 1 1 13 0c0 5.4-6.5 11-6.5 11Z" stroke="#8C5E3C" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="#8C5E3C" stroke-width="1.7"/></svg>
-            <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-weight: 700; font-size: 16px;">Centro Médico Barcelona</span><span style="font-size: 15px; color: #6E6358;">Calle Ejemplo, 10 · Barcelona · <a class="lnk-ci" href="#cita" style="color: #24413A; font-weight: 600;">Cómo llegar</a></span></div>
+            <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-weight: 700; font-size: 16px;">Centro Médico Barcelona</span><span style="font-size: 15px; color: #6E6358;">Calle Ejemplo, 10 · Barcelona · <a class="lnk-ci" href="https://www.google.com/maps/search/?api=1&amp;query=Calle+Ejemplo+10+Barcelona" target="_blank" rel="noopener" style="color: #24413A; font-weight: 600;">Cómo llegar</a></span></div>
           </div>
           <div style="display: flex; gap: 16px; align-items: flex-start; padding: 18px 0; border-bottom: 1px solid #D9CBB8;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 1 1 13 0c0 5.4-6.5 11-6.5 11Z" stroke="#8C5E3C" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="#8C5E3C" stroke-width="1.7"/></svg>
-            <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-weight: 700; font-size: 16px;">Clínica Oftalmológica Sant Cugat</span><span style="font-size: 15px; color: #6E6358;">Avenida Ejemplo, 25 · Sant Cugat del Vallès · <a class="lnk-ci" href="#cita" style="color: #24413A; font-weight: 600;">Cómo llegar</a></span></div>
+            <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-weight: 700; font-size: 16px;">Clínica Oftalmológica Sant Cugat</span><span style="font-size: 15px; color: #6E6358;">Avenida Ejemplo, 25 · Sant Cugat del Vallès · <a class="lnk-ci" href="https://www.google.com/maps/search/?api=1&amp;query=Avenida+Ejemplo+25+Sant+Cugat+del+Valles" target="_blank" rel="noopener" style="color: #24413A; font-weight: 600;">Cómo llegar</a></span></div>
           </div>
         </div>
+        <a class="more-link" href="../proxima-pagina.html?p=contacto&amp;e=calido">Ver centros y contacto <span aria-hidden="true">→</span></a>
       </div>
       <div data-reveal="1" class="widget" style="flex: 1 1 440px; min-width: 0; background: #FFFFFF; border-radius: 12px; padding: 40px; display: flex; flex-direction: column; gap: 22px; box-shadow: 0 24px 50px rgba(42,38,34,0.10); box-sizing: border-box;">
         <div style="display: flex; align-items: center; gap: 16px;">
           <img class="avatar" src="../img/avatar-p1-128.webp" width="64" height="64" alt="Foto de muestra de la doctora" loading="lazy" decoding="async" style="width: 64px; height: 64px; border-radius: 6px; object-fit: cover; flex: none;">
           <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 700; font-size: 20px;">Dra. Katia Sotelo</span><span style="font-size: 14px; color: #6E6358;">Oftalmóloga · Cirugía de cataratas y párpados</span></div>
         </div>
-        <div class="days" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; text-align: center;">
-          <div style="border: 1.5px solid #24413A; background: #EEF2EF; border-radius: 8px; padding: 14px 4px; font-size: 14px;"><div style="font-weight: 700;">Lun</div><div style="color: #24413A;">10:00</div></div>
-          <div style="border: 1px solid #E5DBCD; border-radius: 8px; padding: 14px 4px; font-size: 14px;"><div style="font-weight: 700;">Mar</div><div style="color: #6E6358;">16:30</div></div>
-          <div style="border: 1px solid #E5DBCD; border-radius: 8px; padding: 14px 4px; font-size: 14px;"><div style="font-weight: 700;">Jue</div><div style="color: #6E6358;">09:15</div></div>
-          <div style="border: 1px solid #E5DBCD; border-radius: 8px; padding: 14px 4px; font-size: 14px;"><div style="font-weight: 700;">Vie</div><div style="color: #6E6358;">12:00</div></div>
-        </div>
-        <a class="btn1" href="#cita" style="display: inline-flex; justify-content: center; align-items: center; background: #24413A; color: #FFFFFF; text-decoration: none; padding: 18px 24px; border-radius: 6px; font-weight: 600; font-size: 16px; min-height: 56px; box-sizing: border-box;">Ver horas disponibles</a>
+        <div class="days"><button type="button" class="day on" aria-pressed="true" data-d="Lun" data-h="10:00"><b>Lun</b><br>10:00</button><button type="button" class="day" aria-pressed="false" data-d="Mar" data-h="16:30"><b>Mar</b><br>16:30</button><button type="button" class="day" aria-pressed="false" data-d="Jue" data-h="09:15"><b>Jue</b><br>09:15</button><button type="button" class="day" aria-pressed="false" data-d="Vie" data-h="12:00"><b>Vie</b><br>12:00</button></div>
+        <a class="btn1" data-cita href="https://wa.me/34600000000" target="_blank" rel="noopener" style="display: inline-flex; justify-content: center; align-items: center; background: #24413A; color: #FFFFFF; text-decoration: none; padding: 18px 24px; border-radius: 6px; font-weight: 600; font-size: 16px; min-height: 56px; box-sizing: border-box;"><span data-label>Pedir cita</span></a>
         <p style="font-size: 13px; color: #6E6358; text-align: center;">Ejemplo: aquí irá tu calendario real de Doctoralia</p>
       </div>
     </div>
@@ -391,10 +439,13 @@ footer nav[aria-label="Páginas"]{gap:0!important}
         </div>
         <nav aria-label="Páginas" style="display: flex; flex-direction: column; gap: 10px; font-size: 15px;">
           <span style="color: #FFFFFF; font-weight: 600;">La web</span>
-          <a href="#cirugias" style="color: #BFCFC8; text-decoration: none;">Cirugías</a>
-          <a href="#sobre-mi" style="color: #BFCFC8; text-decoration: none;">Trayectoria</a>
-          <a href="#preguntas" style="color: #BFCFC8; text-decoration: none;">Preguntas frecuentes</a>
-          <a href="#cita" style="color: #BFCFC8; text-decoration: none;">Pedir cita</a>
+          <a href="#inicio" style="color: #BFCFC8; text-decoration: none;">Inicio</a>
+          <a href="../proxima-pagina.html?p=cataratas&amp;e=calido" style="color: #BFCFC8; text-decoration: none;">Cataratas</a>
+          <a href="../proxima-pagina.html?p=parpados&amp;e=calido" style="color: #BFCFC8; text-decoration: none;">Párpados</a>
+          <a href="../proxima-pagina.html?p=doctora&amp;e=calido" style="color: #BFCFC8; text-decoration: none;">La doctora</a>
+          <a href="../proxima-pagina.html?p=primera-visita&amp;e=calido" style="color: #BFCFC8; text-decoration: none;">Primera visita</a>
+          <a href="../proxima-pagina.html?p=preguntas&amp;e=calido" style="color: #BFCFC8; text-decoration: none;">Preguntas</a>
+          <a href="../proxima-pagina.html?p=contacto&amp;e=calido" style="color: #BFCFC8; text-decoration: none;">Contacto</a>
         </nav>
         <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px;">
           <span style="color: #FFFFFF; font-weight: 600;">Contacto</span>
@@ -405,9 +456,9 @@ footer nav[aria-label="Páginas"]{gap:0!important}
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding-top: 24px; border-top: 1px solid #33504A; font-size: 14px;">
         <span>Nº de colegiada 08/00000 · Nº de registro sanitario 00000</span>
         <nav aria-label="Enlaces legales" style="display: flex; flex-wrap: wrap; gap: 22px;">
-          <a href="#inicio" style="color: #BFCFC8;">Aviso legal</a>
-          <a href="#inicio" style="color: #BFCFC8;">Privacidad</a>
-          <a href="#inicio" style="color: #BFCFC8;">Cookies</a>
+          <a href="../proxima-pagina.html?p=legal&amp;e=calido" style="color: #BFCFC8;">Aviso legal</a>
+          <a href="../proxima-pagina.html?p=legal&amp;e=calido" style="color: #BFCFC8;">Privacidad</a>
+          <a href="../proxima-pagina.html?p=legal&amp;e=calido" style="color: #BFCFC8;">Cookies</a>
         </nav>
       </div>
       <a class="wa-float" href="https://wa.me/34600000000" aria-label="Escribir por WhatsApp" style="position: fixed; right: 28px; bottom: 28px; width: 60px; height: 60px; border-radius: 999px; background: #24413A; display: flex; align-items: center; justify-content: center; box-shadow: 0 14px 30px rgba(28,53,48,0.3); z-index: 10;">

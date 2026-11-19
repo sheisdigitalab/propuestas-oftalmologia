@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <script>(function(){var h=document.documentElement;h.classList.add("js");setTimeout(function(){if(!h.classList.contains("anim"))h.classList.add("no-anim")},2500)})()</script>
+<script src="../js/cita.js" defer></script>
 <script src="../js/animaciones.js" defer></script>
 <title>Propuesta web · Estilo clásico · Dra. Katia Sotelo</title>
 <meta name="description" content="Propuesta de diseño para la web de la Dra. Katia Sotelo. Las fotos y los datos son de ejemplo.">
@@ -84,7 +85,7 @@ nav.menu .btn{color:var(--white);min-height:48px;padding:0 22px}
 .actions{display:flex;flex-wrap:wrap;gap:14px}
 .trust{display:flex;flex-wrap:wrap;gap:12px 32px;font-weight:700;color:var(--navy);font-size:17px;margin-top:8px}
 .trust span{display:inline-flex;align-items:center;gap:8px}
-.hero .ph{height:520px;border-radius:6px;border:8px solid var(--white);box-shadow:0 16px 40px rgba(30,58,95,.15)}
+.hero .ph{height:520px;border-radius:6px;box-shadow:0 10px 28px rgba(30,58,95,.12)}
 
 /* Especialidades */
 .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
@@ -131,7 +132,9 @@ nav.menu .btn{color:var(--white);min-height:48px;padding:0 22px}
 .who{display:flex;align-items:center;gap:16px}
 .avatar{width:64px;height:64px;border-radius:999px;background:#D5DFEA;flex:none}
 .days{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;text-align:center;font-size:16px}
-.days div{border:1px solid var(--line);border-radius:4px;padding:12px 4px}
+.days div,.days button{border:1px solid var(--line);border-radius:4px;padding:12px 4px}
+.days button{font:inherit;color:inherit;background:#fff;cursor:pointer;min-height:56px;line-height:1.4}
+.days button:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
 .days .on{border:2px solid var(--blue);background:#E3EDF7}
 .widget small{text-align:center;color:var(--muted);font-size:15px}
 .call{display:flex;align-items:center;gap:14px;padding:18px 20px;border-radius:6px;background:var(--navy);color:var(--white);text-decoration:none;font-weight:700}
@@ -206,7 +209,7 @@ footer a{color:#C3D2E3}
 .mbar{display:none}
 @media (max-width:600px){
   .days{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-  .days div{padding:18px 8px;font-size:18px}
+  .days div,.days button{padding:18px 8px;font-size:18px}
 }
 @media (max-width:760px){
   body{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
@@ -254,8 +257,8 @@ footer a{color:#C3D2E3}
 .proc-steps{list-style:none;margin:0;padding:0}
 .proc-step{position:relative;padding:30px 0 34px}
 .proc-step::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:#6F94BF}
-.proc-step h3{margin:0 0 12px;display:flex;align-items:baseline;gap:14px;font-family:var(--serif);font-weight:700;font-size:21px;color:#FFFFFF}
-.proc-step h3 .n{color:#9EC3E8;min-width:1.1ch}
+.proc-step h3{margin:0 0 12px;font-family:var(--serif);font-weight:700;font-size:21px;color:#FFFFFF}
+.proc-step h3 .n{display:inline-block;margin-right:10px;color:#9EC3E8;min-width:1.1ch}
 .proc-step p{margin:0;font-size:17px;line-height:1.65;color:#DCE6F2}
 .proc-cta{margin-top:8px}
 @media (max-width:900px){
@@ -264,6 +267,41 @@ footer a{color:#C3D2E3}
   .proc-step{padding:26px 0 28px}
   .proc-cta .btn,.proc-cta a{width:100%;box-sizing:border-box;justify-content:center}
 }
+
+/* Enlaces hacia las páginas de la web */
+.faq-more{margin-top:28px}
+.doctor-text .more,.booking .more{display:inline-flex;align-items:center;gap:8px;min-height:44px}
+.proc-more{display:inline-flex;align-items:center;gap:8px;min-height:48px;margin-left:24px;font-weight:700;font-size:17px;color:#9EC3E8;text-decoration:none;border-bottom:2px solid #6F94BF}
+.proc-more:hover,.proc-more:focus-visible{color:#FFFFFF;border-color:#FFFFFF}
+@media (max-width:960px){.proc-cta{display:flex;flex-direction:column;align-items:stretch}.proc-more{margin:14px 0 0;justify-content:center;border-bottom:0;text-decoration:underline;text-underline-offset:4px}}
+
+/* Menú desplegable también en pantallas medianas (el menú tiene 5 páginas) */
+@media (min-width:961px) and (max-width:1100px){
+  .nav-toggle{display:inline-flex}
+  .hdr-cta{display:inline-flex;min-height:44px;padding:0 18px;font-size:16px}
+  nav.menu a.btn{display:none}
+  nav.menu{flex:1 1 100%;flex-direction:column;align-items:stretch;gap:0}
+  html.js nav.menu:not(.open){display:none}
+  nav.menu a{border-top:1px solid var(--line);min-height:48px}
+}
+
+/* Consulta: lista técnica sin tarjetas */
+.service-grid{gap:36px}
+.service{background:none;border:0;border-top:3px solid var(--navy);border-radius:0;padding:20px 0 0;gap:10px}
+.service .n{font-weight:700;font-size:15px;letter-spacing:.14em;color:var(--blue-dark);font-variant-numeric:tabular-nums}
+.service h3{font-size:21px}
+.service:hover,.service:focus-within{transform:none!important;box-shadow:none!important}
+/* Opiniones */
+.reviews{background:#E8EFF7}
+.reviews .wrap{display:flex;flex-direction:column;gap:40px}
+.rev-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.rev{margin:0;background:var(--white);border:1px solid var(--line);border-top:3px solid var(--navy);border-radius:2px;padding:28px;display:flex;flex-direction:column;gap:20px}
+.rev blockquote{margin:0}
+.rev p{margin:0;font-family:var(--serif);font-size:18px;line-height:1.65;color:var(--text)}
+.rev figcaption{font-size:16px;color:var(--muted);display:flex;flex-direction:column;gap:2px}
+.rev figcaption strong{color:var(--navy)}
+.rev-note{margin:0;font-size:16px;color:var(--muted)}
+@media (max-width:960px){.rev-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -286,10 +324,11 @@ footer a{color:#C3D2E3}
     <a class="btn hdr-cta" href="#cita">Pedir cita</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menú"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="lbl">Menú</span></button>
     <nav class="menu" id="site-nav" aria-label="Menú principal">
-      <a href="#cirugias">Cirugías</a>
-      <a href="#consulta">Consulta</a>
-      <a href="#doctora">Sobre mí</a>
-      <a href="#preguntas">Preguntas</a>
+      <a href="../proxima-pagina.html?p=cataratas&amp;e=clasico">Cataratas</a>
+      <a href="../proxima-pagina.html?p=parpados&amp;e=clasico">Párpados</a>
+      <a href="../proxima-pagina.html?p=doctora&amp;e=clasico">La doctora</a>
+      <a href="../proxima-pagina.html?p=primera-visita&amp;e=clasico">Primera visita</a>
+      <a href="../proxima-pagina.html?p=preguntas&amp;e=clasico">Preguntas</a>
       <a class="btn" href="#cita">Pedir cita</a>
     </nav>
   </div>
@@ -330,16 +369,16 @@ footer a{color:#C3D2E3}
             <h3>Cirugía de cataratas</h3>
             <p>Si ve borroso, con colores apagados o le deslumbran las luces, puede tener cataratas. La operación sustituye el cristalino opaco por una lente intraocular. Es ambulatoria.</p>
             <ul><li>Estudio preoperatorio completo</li><li>Lente adaptada a su vista</li><li>Revisiones después de la cirugía</li></ul>
-            <a class="more" href="#cirugias">Más información sobre cataratas <span class="arr" aria-hidden="true">→</span></a>
+            <a class="more" href="../proxima-pagina.html?p=cataratas&amp;e=clasico">Más información sobre cataratas <span class="arr" aria-hidden="true">→</span></a>
           </div>
         </article>
         <article class="card">
-          <div class="ph has-img"><img class="photo" src="../img/p3-parpados-1100.webp" srcset="../img/p3-parpados-600.webp 600w, ../img/p3-parpados-1100.webp 1100w" sizes="(max-width: 960px) 100vw, 552px" width="1100" height="518" alt="Foto de muestra: primer plano de la mirada de una mujer mayor" loading="lazy" decoding="async" style="object-position:center"></div>
+          <div class="ph has-img"><img class="photo" src="../img/p3-parpados-1100.webp" srcset="../img/p3-parpados-600.webp 600w, ../img/p3-parpados-1100.webp 1100w" sizes="(max-width: 960px) 100vw, 552px" width="1100" height="518" alt="Foto de muestra: primer plano de la mirada de una mujer mayor de ojos claros" loading="lazy" decoding="async" style="object-position:center 40%"></div>
           <div class="card-body">
             <h3>Cirugía de párpados</h3>
             <p>El párpado caído, el exceso de piel o las lesiones del párpado pueden reducir la visión y resultar molestos. Valoro cada caso para indicar el tratamiento adecuado.</p>
             <ul><li>Blefaroplastia</li><li>Ptosis palpebral (párpado caído)</li><li>Chalazión y lesiones del párpado</li></ul>
-            <a class="more" href="#cirugias">Más información sobre párpados <span class="arr" aria-hidden="true">→</span></a>
+            <a class="more" href="../proxima-pagina.html?p=parpados&amp;e=clasico">Más información sobre párpados <span class="arr" aria-hidden="true">→</span></a>
           </div>
         </article>
       </div>
@@ -352,7 +391,7 @@ footer a{color:#C3D2E3}
         <span class="kicker">Por qué confiar</span>
         <h2 id="por-que">Su vista, en buenas manos</h2>
       </div>
-      <div class="proc"><div class="proc-photo"><img src="../img/p3-hero-960.webp" srcset="../img/p3-hero-480.webp 480w, ../img/p3-hero-960.webp 960w" sizes="(max-width: 900px) 100vw, 40vw" width="960" height="1027" alt="Foto de muestra: la doctora sentada junto a la lámpara de hendidura en una consulta luminosa" loading="lazy" decoding="async" style="object-position:38% center"></div><div class="proc-body"><blockquote class="proc-quote">“Mi compromiso es que entienda su diagnóstico y llegue a la cirugía con total confianza.”</blockquote><ol class="proc-steps"><li class="proc-step" style="--i:0"><h3><span class="n">1</span><span>Diagnóstico completo</span></h3><p>La primera consulta incluye la medición de la agudeza visual, la presión ocular y la exploración con lámpara de hendidura del cristalino y del fondo de ojo. Con estos datos se establece un diagnóstico claro antes de indicar ninguna intervención.</p></li><li class="proc-step" style="--i:1"><h3><span class="n">2</span><span>Información clara</span></h3><p>Le explico la técnica quirúrgica, los resultados que puede esperar y los riesgos, con palabras sencillas y sin prisas. Usted decide con toda la información y puede consultar sus dudas cuantas veces necesite antes de fijar la fecha.</p></li><li class="proc-step" style="--i:2"><h3><span class="n">3</span><span>Seguimiento personal</span></h3><p>Las revisiones posteriores a la cirugía las realizo yo misma: al día siguiente, a la semana y al mes. Se controla la cicatrización y la recuperación de la visión hasta darle el alta.</p></li></ol><div class="proc-cta"><a class="btn" href="#cita">Pedir cita</a></div></div></div>
+      <div class="proc"><div class="proc-photo"><img src="../img/p3-proceso-960.webp" srcset="../img/p3-proceso-480.webp 480w, ../img/p3-proceso-960.webp 960w" sizes="(max-width: 900px) 100vw, 40vw" width="960" height="1280" alt="Foto de muestra: detalle del equipo de la consulta, con lámpara de hendidura y una montura de pruebas" loading="lazy" decoding="async"></div><div class="proc-body"><blockquote class="proc-quote">“Mi compromiso es que entienda su diagnóstico y llegue a la cirugía con total confianza.”</blockquote><ol class="proc-steps"><li class="proc-step" style="--i:0"><h3><span class="n">1</span> <span>Diagnóstico completo</span></h3><p>La primera consulta incluye la medición de la agudeza visual, la presión ocular y la exploración con lámpara de hendidura del cristalino y del fondo de ojo. Con estos datos se establece un diagnóstico claro antes de indicar ninguna intervención.</p></li><li class="proc-step" style="--i:1"><h3><span class="n">2</span> <span>Información clara</span></h3><p>Le explico la técnica quirúrgica, los resultados que puede esperar y los riesgos, con palabras sencillas y sin prisas. Usted decide con toda la información y puede consultar sus dudas cuantas veces necesite antes de fijar la fecha.</p></li><li class="proc-step" style="--i:2"><h3><span class="n">3</span> <span>Seguimiento personal</span></h3><p>Las revisiones posteriores a la cirugía las realizo yo misma: al día siguiente, a la semana y al mes. Se controla la cicatrización y la recuperación de la visión hasta darle el alta.</p></li></ol><div class="proc-cta"><a class="btn" href="#cita">Pedir cita</a><a class="proc-more" href="../proxima-pagina.html?p=primera-visita&amp;e=clasico">Cómo es la primera visita <span aria-hidden="true">→</span></a></div></div></div>
     </div>
   </section>
 
@@ -369,7 +408,19 @@ footer a{color:#C3D2E3}
           <li><strong>Sociedades</strong><span>Sociedad Española de Oftalmología</span></li>
           <li><strong>Colegiada</strong><span>Nº 08/00000</span></li>
         </ul>
+        <a class="more" href="../proxima-pagina.html?p=doctora&amp;e=clasico">Conocer a la doctora <span aria-hidden="true">→</span></a>
       </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="opiniones">
+    <div class="wrap">
+      <div data-reveal class="section-head">
+        <span class="kicker">Opiniones</span>
+        <h2>Lo que cuentan sus pacientes</h2>
+      </div>
+      <div data-stagger class="rev-grid"><figure class="rev"><blockquote><p>“Me explicó cada paso con calma y salí de la consulta sin dudas. A la semana ya veía los colores como hacía años.”</p></blockquote><figcaption><strong>Mercè, 68 años</strong><span>Cirugía de cataratas</span></figcaption></figure><figure class="rev"><blockquote><p>“Tenía miedo a la operación, pero fue rápida y sin dolor. La doctora me revisó al día siguiente y todo fue como me había explicado.”</p></blockquote><figcaption><strong>Josep, 72 años</strong><span>Cirugía de cataratas</span></figcaption></figure><figure class="rev"><blockquote><p>“Quería recuperar la mirada descansada sin que se notara. El resultado es natural y me trataron con mucho cuidado.”</p></blockquote><figcaption><strong>Núria, 59 años</strong><span>Cirugía de párpados</span></figcaption></figure></div>
+      <p class="rev-note">Opiniones de ejemplo</p>
     </div>
   </section>
 
@@ -379,12 +430,7 @@ footer a{color:#C3D2E3}
         <span class="kicker">Consulta</span>
         <h2>Revisión oftalmológica completa</h2>
       </div>
-      <div data-stagger class="service-grid">
-        <div class="service"><span class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M2.5 12c2.2-4 5.4-6 9.5-6s7.3 2 9.5 6c-2.2 4-5.4 6-9.5 6s-7.3-2-9.5-6Z" stroke="#215A91" stroke-width="1.7"/><circle cx="12" cy="12" r="3" stroke="#215A91" stroke-width="1.7"/></svg></span><h3>Graduación de la vista</h3><p>De lejos y de cerca.</p></div>
-        <div class="service"><span class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="#215A91" stroke-width="1.7"/><path d="M12 7.5V12l3 2" stroke="#215A91" stroke-width="1.7" stroke-linecap="round"/></svg></span><h3>Presión ocular</h3><p>Prevención y control del glaucoma.</p></div>
-        <div class="service"><span class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="#215A91" stroke-width="1.7"/><circle cx="12" cy="12" r="3.5" stroke="#215A91" stroke-width="1.7"/></svg></span><h3>Fondo de ojo</h3><p>Revisión de la retina y el nervio óptico.</p></div>
-        <div class="service"><span class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 18c3-1 5-3.5 8-3.5s5 2.5 8 3.5M5 10c2.2-2.6 4.5-4 7-4s4.8 1.4 7 4" stroke="#215A91" stroke-width="1.7" stroke-linecap="round"/></svg></span><h3>Párpados y ojo seco</h3><p>Valoración de párpados y superficie ocular.</p></div>
-      </div>
+      <div data-stagger class="service-grid"><div class="service"><span class="n" aria-hidden="true">01</span><h3>Graduación de la vista</h3><p>Medición de la agudeza visual de lejos y de cerca, y ajuste de la graduación.</p></div><div class="service"><span class="n" aria-hidden="true">02</span><h3>Presión ocular</h3><p>Control de la presión intraocular para prevenir y vigilar el glaucoma.</p></div><div class="service"><span class="n" aria-hidden="true">03</span><h3>Fondo de ojo</h3><p>Revisión de la retina y del nervio óptico, con dilatación de la pupila si hace falta.</p></div><div class="service"><span class="n" aria-hidden="true">04</span><h3>Párpados y ojo seco</h3><p>Valoración de los párpados y de la superficie del ojo, con tratamiento si procede.</p></div></div>
     </div>
   </section>
 
@@ -392,14 +438,15 @@ footer a{color:#C3D2E3}
     <div class="wrap">
       <div data-reveal class="section-head">
         <span class="kicker">Preguntas frecuentes</span>
-        <h2>Resolvemos sus dudas</h2>
+        <h2>Resuelvo sus dudas</h2>
       </div>
       <div data-stagger class="faq-list">
         <div class="faq-item"><h3>¿La operación de cataratas duele?</h3><p>Se realiza con anestesia local y la mayoría de pacientes solo notan una ligera presión. Es ambulatoria: vuelve a casa el mismo día.</p></div>
-        <div class="faq-item"><h3>¿Cuándo debo operarme?</h3><p>Cuando la catarata empieza a limitar su día a día: leer, conducir o ver la televisión. Lo valoramos en consulta.</p></div>
-        <div class="faq-item"><h3>¿La cirugía de párpados es solo estética?</h3><p>No siempre. Un párpado caído puede reducir el campo de visión. En consulta valoramos si es funcional, estética o ambas.</p></div>
+        <div class="faq-item"><h3>¿Cuándo debo operarme?</h3><p>Cuando la catarata empieza a limitar su día a día: leer, conducir o ver la televisión. Lo valoro en consulta.</p></div>
+        <div class="faq-item"><h3>¿La cirugía de párpados es solo estética?</h3><p>No siempre. Un párpado caído puede reducir el campo de visión. En consulta valoro si es funcional, estética o ambas.</p></div>
         <div class="faq-item"><h3>¿Cómo pido cita?</h3><p>Online desde esta web, a cualquier hora, o llamando a la consulta.</p></div>
       </div>
+      <p class="faq-more"><a class="more" href="../proxima-pagina.html?p=preguntas&amp;e=clasico">Ver todas las preguntas <span aria-hidden="true">→</span></a></p>
     </div>
   </section>
 
@@ -408,17 +455,18 @@ footer a{color:#C3D2E3}
       <div data-reveal style="display:flex;flex-direction:column;gap:20px">
         <span class="kicker">Pedir cita</span>
         <h2>Reserve su cita</h2>
-        <p class="lead">Elija día y hora online. Si lo prefiere, llámenos y le atendemos personalmente.</p>
+        <p class="lead">Elija día y hora online. Si lo prefiere, llámeme y le atiendo personalmente.</p>
         <a class="call" href="tel:+34600000000"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3.5h3l1.5 4-2 1.3a11 11 0 0 0 6.1 6.1l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z" stroke="#FFFFFF" stroke-width="1.7" stroke-linejoin="round"/></svg>Llamar: 600 000 000</a>
         <div class="centres">
-          <div class="centre"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex:none"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 1 1 13 0c0 5.4-6.5 11-6.5 11Z" stroke="#215A91" stroke-width="1.7"/><circle cx="12" cy="10" r="2.4" stroke="#215A91" stroke-width="1.7"/></svg><div><strong>Centro Médico Barcelona</strong><br><span style="color:var(--muted)">Calle Ejemplo, 10 · Barcelona</span> · <a href="#cita">Cómo llegar</a></div></div>
-          <div class="centre"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex:none"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 1 1 13 0c0 5.4-6.5 11-6.5 11Z" stroke="#215A91" stroke-width="1.7"/><circle cx="12" cy="10" r="2.4" stroke="#215A91" stroke-width="1.7"/></svg><div><strong>Clínica Oftalmológica Sant Cugat</strong><br><span style="color:var(--muted)">Avenida Ejemplo, 25 · Sant Cugat del Vallès</span> · <a href="#cita">Cómo llegar</a></div></div>
+          <div class="centre"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex:none"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 1 1 13 0c0 5.4-6.5 11-6.5 11Z" stroke="#215A91" stroke-width="1.7"/><circle cx="12" cy="10" r="2.4" stroke="#215A91" stroke-width="1.7"/></svg><div><strong>Centro Médico Barcelona</strong><br><span style="color:var(--muted)">Calle Ejemplo, 10 · Barcelona</span> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Calle+Ejemplo+10+Barcelona" target="_blank" rel="noopener">Cómo llegar</a></div></div>
+          <div class="centre"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex:none"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 1 1 13 0c0 5.4-6.5 11-6.5 11Z" stroke="#215A91" stroke-width="1.7"/><circle cx="12" cy="10" r="2.4" stroke="#215A91" stroke-width="1.7"/></svg><div><strong>Clínica Oftalmológica Sant Cugat</strong><br><span style="color:var(--muted)">Avenida Ejemplo, 25 · Sant Cugat del Vallès</span> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Avenida+Ejemplo+25+Sant+Cugat+del+Valles" target="_blank" rel="noopener">Cómo llegar</a></div></div>
         </div>
+        <a class="more" href="../proxima-pagina.html?p=contacto&amp;e=clasico">Ver centros y contacto <span aria-hidden="true">→</span></a>
       </div>
       <div data-reveal="1" class="widget">
         <div class="who"><img class="avatar" src="../img/avatar-p3-128.webp" width="64" height="64" alt="Foto de muestra de la doctora" loading="lazy" decoding="async" style="object-fit:cover"><div><div style="font-family:var(--serif);font-weight:700;font-size:20px;color:var(--navy)">Dra. Katia Sotelo</div><div style="color:var(--muted);font-size:16px">Oftalmóloga</div></div></div>
-        <div class="days"><div class="on"><b>Lun</b><br>10:00</div><div><b>Mar</b><br>16:30</div><div><b>Jue</b><br>09:15</div><div><b>Vie</b><br>12:00</div></div>
-        <a class="btn" href="#cita">Ver horas disponibles</a>
+        <div class="days"><button type="button" class="day on" aria-pressed="true" data-d="Lun" data-h="10:00"><b>Lun</b><br>10:00</button><button type="button" class="day" aria-pressed="false" data-d="Mar" data-h="16:30"><b>Mar</b><br>16:30</button><button type="button" class="day" aria-pressed="false" data-d="Jue" data-h="09:15"><b>Jue</b><br>09:15</button><button type="button" class="day" aria-pressed="false" data-d="Vie" data-h="12:00"><b>Vie</b><br>12:00</button></div>
+        <a class="btn" data-cita href="https://wa.me/34600000000" target="_blank" rel="noopener"><span data-label>Pedir cita</span></a>
         <small>Ejemplo: aquí irá el calendario real de Doctoralia</small>
       </div>
     </div>
@@ -428,10 +476,11 @@ footer a{color:#C3D2E3}
 <footer>
   <div class="wrap">
     <div class="foot-col" style="max-width:340px"><p class="foot-name">Dra. Katia Sotelo</p><span>Médica oftalmóloga especializada en cirugía de cataratas y de párpados.</span></div>
+    <div class="foot-col"><h2>La web</h2><a href="#inicio">Inicio</a><a href="../proxima-pagina.html?p=cataratas&amp;e=clasico">Cataratas</a><a href="../proxima-pagina.html?p=parpados&amp;e=clasico">Párpados</a><a href="../proxima-pagina.html?p=doctora&amp;e=clasico">La doctora</a><a href="../proxima-pagina.html?p=primera-visita&amp;e=clasico">Primera visita</a><a href="../proxima-pagina.html?p=preguntas&amp;e=clasico">Preguntas</a><a href="../proxima-pagina.html?p=contacto&amp;e=clasico">Contacto</a></div>
     <div class="foot-col"><h2>Contacto</h2><span>Tel. / WhatsApp: 600 000 000</span><span>consulta@drakatiasotelo.com</span></div>
     <div class="legal">
       <span>Nº de colegiada 08/00000 · Nº de registro sanitario 00000</span>
-      <nav aria-label="Enlaces legales"><a href="#inicio">Aviso legal</a><a href="#inicio">Privacidad</a><a href="#inicio">Cookies</a></nav>
+      <nav aria-label="Enlaces legales"><a href="../proxima-pagina.html?p=legal&amp;e=clasico">Aviso legal</a><a href="../proxima-pagina.html?p=legal&amp;e=clasico">Privacidad</a><a href="../proxima-pagina.html?p=legal&amp;e=clasico">Cookies</a></nav>
     </div>
   </div>
 </footer>

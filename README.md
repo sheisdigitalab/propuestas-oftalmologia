@@ -5,7 +5,7 @@ Prototipos de la página de inicio, en tres estilos:
 - `estilo-calido/`: profesional cálido (propuesta 1)
 - `estilo-elegante/`: lujo discreto (propuesta 2)
 - `estilo-clasico/`: médico tradicional (propuesta 3) (azul marino y blanco, trato de «usted»)
-- `index.html`: portada para elegir entre las tres
+- `index.html`: ya no es una portada; solo redirige a la propuesta 1 para que la raíz no dé error. Cada propuesta se envía con su propio enlace.
 
 Son HTML y CSS estáticos, sin dependencias. Las fuentes están en `fonts/` (alojadas en local) y las páginas llevan `noindex` para que Google no las indexe.
 
@@ -19,7 +19,7 @@ Las fotografías están en `img/` (WebP, recortadas al hueco y con versión pequ
 | --- | --- | --- | --- |
 | `p1-doctora-hero-*`, `avatar-p1-128` | Propuesta 1: portada y avatar de la cita | Antoni Shkraba | [pexels.com/photo/6749753](https://www.pexels.com/photo/6749753/) |
 | `p1-trayectoria-*` | Propuesta 1: trayectoria | Antoni Shkraba | [pexels.com/photo/6749762](https://www.pexels.com/photo/6749762/) |
-| `p1-cataratas-*` | Propuesta 1: cirugía de cataratas | Antoni Shkraba | [pexels.com/photo/6749698](https://www.pexels.com/photo/6749698/) |
+| `p1-cataratas-*` | Propuesta 1: cirugía de cataratas (paciente mujer en lámpara de hendidura) | Autoría en su página de Pexels | [pexels.com/photo/5752281](https://www.pexels.com/photo/5752281/) |
 | `p1-parpados-*` | Propuesta 1: cirugía de párpados | Karolina Grabowska (Kaboompics) | [pexels.com/photo/8528483](https://www.pexels.com/photo/8528483/) |
 | `p2-doctora-hero-*` | Propuesta 2: portada | Antoni Shkraba | [pexels.com/photo/6749788](https://www.pexels.com/photo/6749788/) |
 | `p2-doctora-*`, `avatar-p2-128` | Propuesta 2: la doctora y avatar de la cita | Antoni Shkraba | [pexels.com/photo/6749767](https://www.pexels.com/photo/6749767/) |
@@ -28,13 +28,16 @@ Las fotografías están en `img/` (WebP, recortadas al hueco y con versión pequ
 | `p3-hero-*` | Propuesta 3: portada (la doctora junto a la lámpara de hendidura) | Antoni Shkraba | [pexels.com/photo/6749711](https://www.pexels.com/photo/6749711/) |
 | `p3-doctora-*`, `avatar-p3-128` | Propuesta 3: sobre mí y avatar de la cita | Antoni Shkraba | [pexels.com/photo/6749714](https://www.pexels.com/photo/6749714/) |
 | `p3-cataratas-*` | Propuesta 3: cirugía de cataratas (paciente mujer con foróptero) | Ksenia Chernaya | [pexels.com/photo/5201879](https://www.pexels.com/photo/5201879/) |
-| `p3-parpados-*` | Propuesta 3: cirugía de párpados | Tima Miroshnichenko | [pexels.com/photo/8727557](https://www.pexels.com/photo/8727557/) |
+| `p3-parpados-*` | Propuesta 3: cirugía de párpados (mirada de mujer mayor) | BOOM Photography | [pexels.com/photo/12644996](https://www.pexels.com/photo/12644996/) |
+| `p1-proceso-*` | Propuesta 1: módulo «proceso» (detalle del equipo) | Antoni Shkraba | [pexels.com/photo/6749788](https://www.pexels.com/photo/6749788/) |
+| `p2-proceso-*` | Propuesta 2: módulo «proceso» (detalle del equipo) | Antoni Shkraba | [pexels.com/photo/6749711](https://www.pexels.com/photo/6749711/) |
+| `p3-proceso-*` | Propuesta 3: módulo «proceso» (detalle del equipo) | Antoni Shkraba | [pexels.com/photo/6749753](https://www.pexels.com/photo/6749753/) |
 
 Las imágenes `og-estilo-*.jpg` (1200×630) son capturas de la portada de cada propuesta para la vista previa en WhatsApp.
 
 ## Enlaces directos y vista previa en WhatsApp
 
-Cada propuesta funciona sola, sin pasar por la portada:
+Cada propuesta funciona sola y se envía con su propio enlace:
 
 - `estilo-calido/` (propuesta 1)
 - `estilo-elegante/` (propuesta 2)
