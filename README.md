@@ -23,11 +23,11 @@ Las fotografías están en `img/` (WebP, recortadas al hueco y con versión pequ
 | `p1-parpados-*` | Propuesta 1: cirugía de párpados | Karolina Grabowska (Kaboompics) | [pexels.com/photo/8528483](https://www.pexels.com/photo/8528483/) |
 | `p2-doctora-hero-*` | Propuesta 2: portada | Antoni Shkraba | [pexels.com/photo/6749788](https://www.pexels.com/photo/6749788/) |
 | `p2-doctora-*`, `avatar-p2-128` | Propuesta 2: la doctora y avatar de la cita | Antoni Shkraba | [pexels.com/photo/6749767](https://www.pexels.com/photo/6749767/) |
-| `p2-cataratas-*` | Propuesta 2: cirugía de cataratas | Mike Sangma | [pexels.com/photo/7179236](https://www.pexels.com/photo/7179236/) |
-| `p2-parpados-*` | Propuesta 2: cirugía de párpados | Mehmet Bahtiyar Atasoy | [pexels.com/photo/27830952](https://www.pexels.com/photo/27830952/) |
-| `p3-hero-*` | Propuesta 3: portada | Antoni Shkraba | [pexels.com/photo/6749710](https://www.pexels.com/photo/6749710/) |
+| `p2-cataratas-*` | Propuesta 2: cirugía de cataratas (paciente mujer en autorrefractómetro) | Ksenia Chernaya | [pexels.com/photo/5201897](https://www.pexels.com/photo/5201897/) |
+| `p2-parpados-*` | Propuesta 2: cirugía de párpados (mirada de mujer mayor) | Tony Zohari | [pexels.com/photo/34943056](https://www.pexels.com/photo/34943056/) |
+| `p3-hero-*` | Propuesta 3: portada (la doctora junto a la lámpara de hendidura) | Antoni Shkraba | [pexels.com/photo/6749711](https://www.pexels.com/photo/6749711/) |
 | `p3-doctora-*`, `avatar-p3-128` | Propuesta 3: sobre mí y avatar de la cita | Antoni Shkraba | [pexels.com/photo/6749714](https://www.pexels.com/photo/6749714/) |
-| `p3-cataratas-*` | Propuesta 3: cirugía de cataratas | Mike Sangma | [pexels.com/photo/7179233](https://www.pexels.com/photo/7179233/) |
+| `p3-cataratas-*` | Propuesta 3: cirugía de cataratas (paciente mujer con foróptero) | Ksenia Chernaya | [pexels.com/photo/5201879](https://www.pexels.com/photo/5201879/) |
 | `p3-parpados-*` | Propuesta 3: cirugía de párpados | Tima Miroshnichenko | [pexels.com/photo/8727557](https://www.pexels.com/photo/8727557/) |
 
 Las imágenes `og-estilo-*.jpg` (1200×630) son capturas de la portada de cada propuesta para la vista previa en WhatsApp.
