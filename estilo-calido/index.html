@@ -162,6 +162,30 @@ footer nav[aria-label="Páginas"]{gap:0!important}
   html.js:not(.no-anim) [data-reveal="zoom"] img{transform:scale(1.05);transition:transform 1.4s var(--ease) var(--d,0ms)}
   html.js:not(.no-anim) [data-reveal="zoom"].is-in img{transform:none}
 }
+
+/* Proceso: pasos conectados */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:#1C3530;border:1px solid #33504A;border-radius:12px;overflow:hidden}
+.step{--pad:36px;padding:40px var(--pad);display:flex;flex-direction:column;gap:14px;position:relative}
+.step .ic{color:#D2B08C;flex:none}
+.step .rail{display:flex;align-items:center;margin:0 calc(var(--pad) * -1)}
+.step .rail::before{content:"";flex:0 0 calc(var(--pad) - 14px);height:2px;border-radius:2px;background:rgba(210,176,140,.5)}
+.step .rail::after{content:"";flex:1;height:2px;border-radius:2px;background:rgba(210,176,140,.5)}
+.step:first-child .rail::before,.step:last-child .rail::after{background:transparent}
+.step .num{margin:0 14px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:700;font-size:32px;line-height:1;color:#D2B08C}
+.step p{font-size:15px;line-height:1.7;color:#BFCFC8;margin:0}
+@media (max-width:900px){
+  .steps{grid-template-columns:1fr}
+  .step{--pad:24px;display:grid;grid-template-columns:44px 1fr;column-gap:16px;row-gap:10px;align-items:center;padding:32px var(--pad)}
+  .step .ic{grid-column:2;grid-row:1;justify-self:start}
+  .step .rail{display:block;margin:0;grid-column:1;grid-row:1;justify-self:center}
+  .step .rail::before,.step .rail::after{display:none}
+  .step .num{display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin:0;border:2px solid rgba(210,176,140,.6);border-radius:50%;background:#1C3530;font-size:17px;position:relative;z-index:1}
+  .step h3{grid-column:2;grid-row:2;align-self:start}
+  .step p{grid-column:2;grid-row:3;align-self:start}
+  .step::before{content:"";position:absolute;left:calc(var(--pad) + 21px);width:2px;top:0;bottom:0;background:rgba(210,176,140,.5)}
+  .step:first-child::before{top:54px}
+  .step:last-child::before{bottom:auto;height:54px}
+}
 </style>
 </head>
 <body>
@@ -266,7 +290,7 @@ footer nav[aria-label="Páginas"]{gap:0!important}
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="#24413A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
-        <div data-reveal class="ph-box" style="flex: 1 1 440px; min-width: 0; height: 440px; border-radius: 6px; background: #D5DDD7; overflow: hidden;"><img class="photo" src="../img/p1-parpados-1000.webp" srcset="../img/p1-parpados-560.webp 560w, ../img/p1-parpados-1000.webp 1000w" sizes="(min-width: 1240px) 540px, 100vw" width="1000" height="824" alt="Foto de muestra: retrato de la mirada de una mujer de pelo blanco" loading="lazy" decoding="async" style="object-position: center 35%;"></div>
+        <div data-reveal class="ph-box" style="flex: 1 1 440px; min-width: 0; height: 440px; border-radius: 6px; background: #D5DDD7; overflow: hidden;"><img class="photo" src="../img/p1-parpados-1000.webp" srcset="../img/p1-parpados-560.webp 560w, ../img/p1-parpados-1000.webp 1000w" sizes="(min-width: 1240px) 540px, 100vw" width="1000" height="815" alt="Foto de muestra: retrato de la mirada de una mujer de pelo blanco" loading="lazy" decoding="async" style="object-position: center 25%;"></div>
       </div>
     </div>
   </section>
@@ -281,23 +305,8 @@ footer nav[aria-label="Páginas"]{gap:0!important}
         </div>
         <p style="font-size: 17px; line-height: 1.7; color: #BFCFC8; max-width: 420px;">Cada cirugía se planifica de forma individual y se realiza en Clínica Oftalmológica Sant Cugat, con todas las garantías.</p>
       </div>
-      <div data-stagger style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: #33504A; border: 1px solid #33504A; border-radius: 12px; overflow: hidden;">
-        <div style="background: #1C3530; padding: 40px 36px; display: flex; flex-direction: column; gap: 14px;">
-          <span style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 700; font-size: 32px; color: #D2B08C; line-height: 1;">I</span>
-          <h3 style="color: #FFFFFF;">Diagnóstico preciso</h3>
-          <p style="font-size: 15px; line-height: 1.7; color: #BFCFC8;">Pruebas completas antes de indicar cualquier cirugía.</p>
-        </div>
-        <div style="background: #1C3530; padding: 40px 36px; display: flex; flex-direction: column; gap: 14px;">
-          <span style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 700; font-size: 32px; color: #D2B08C; line-height: 1;">II</span>
-          <h3 style="color: #FFFFFF;">Información clara</h3>
-          <p style="font-size: 15px; line-height: 1.7; color: #BFCFC8;">Te explico la técnica, los resultados esperables y los riesgos antes de decidir.</p>
-        </div>
-        <div style="background: #1C3530; padding: 40px 36px; display: flex; flex-direction: column; gap: 14px;">
-          <span style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 700; font-size: 32px; color: #D2B08C; line-height: 1;">III</span>
-          <h3 style="color: #FFFFFF;">Seguimiento personal</h3>
-          <p style="font-size: 15px; line-height: 1.7; color: #BFCFC8;">Las revisiones después de la cirugía las hago yo misma.</p>
-        </div>
-      </div>
+      <ol class="steps" data-stagger aria-label="Pasos del proceso" style="list-style:none;margin:0;padding:0"><div class="step"><svg class="ic" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5.5 5.5"/></svg><div class="rail"><span class="num">I</span></div><h3 style="color: #FFFFFF;">Diagnóstico preciso</h3><p>Pruebas completas antes de indicar cualquier cirugía.</p></div><div class="step"><svg class="ic" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg><div class="rail"><span class="num">II</span></div><h3 style="color: #FFFFFF;">Información clara</h3><p>Te explico la técnica, los resultados esperables y los riesgos antes de decidir.</p></div><div class="step"><svg class="ic" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4M9 15l2 2 4-4"/></svg><div class="rail"><span class="num">III</span></div><h3 style="color: #FFFFFF;">Seguimiento personal</h3><p>Las revisiones después de la cirugía las hago yo misma.</p></div></ol>
+      <div data-reveal><a class="cta btn1" href="#cita" style="display: inline-flex; align-items: center; gap: 8px; background: #FAF6F0; color: #24413A; text-decoration: none; padding: 13px 24px; border-radius: 6px; font-weight: 600; min-height: 48px; box-sizing: border-box;">Pedir cita</a></div>
     </div>
   </section>
 

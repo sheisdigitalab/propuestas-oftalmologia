@@ -242,6 +242,32 @@ footer nav a{color:var(--muted)}
   html.js:not(.no-anim) [data-line]::before{transform:scaleX(0);transform-origin:left center;transition:transform .9s var(--ease) calc(var(--d,0ms) + 150ms)}
   html.js:not(.no-anim) [data-line].is-in::before{transform:none}
 }
+
+/* Proceso: pasos conectados */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:var(--bg2);border:1px solid var(--line);margin-top:64px}
+.step{--pad:40px;padding:48px var(--pad);display:flex;flex-direction:column;gap:14px;position:relative}
+.step .ic{color:var(--gold);flex:none}
+.step .rail{display:flex;align-items:center;margin:0 calc(var(--pad) * -1)}
+.step .rail::before{content:"";flex:0 0 calc(var(--pad) - 16px);height:1px;background:rgba(212,188,148,.55)}
+.step .rail::after{content:"";flex:1;height:1px;background:rgba(212,188,148,.55)}
+.step:first-child .rail::before,.step:last-child .rail::after{background:transparent}
+.step .roman{margin:0 16px}
+.step p{color:var(--muted);font-size:17px;margin:0}
+.steps-cta{margin-top:56px}
+@media (max-width:900px){
+  .steps{grid-template-columns:1fr;margin-top:48px}
+  .step{--pad:28px;display:grid;grid-template-columns:44px 1fr;column-gap:20px;row-gap:10px;align-items:center;padding:36px var(--pad)}
+  .step .ic{grid-column:2;grid-row:1;justify-self:start}
+  .step .rail{display:block;margin:0;grid-column:1;grid-row:1;justify-self:center}
+  .step .rail::before,.step .rail::after{display:none}
+  .step .roman{display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin:0;border:1px solid rgba(212,188,148,.6);border-radius:50%;background:var(--bg2);font-size:17px;position:relative;z-index:1}
+  .step h3{grid-column:2;grid-row:2;align-self:start}
+  .step p{grid-column:2;grid-row:3;align-self:start}
+  .step::before{content:"";position:absolute;left:calc(var(--pad) + 21px);width:1px;top:0;bottom:0;background:rgba(212,188,148,.5)}
+  .step:first-child::before{top:58px}
+  .step:last-child::before{bottom:auto;height:58px}
+  .steps-cta .btn{width:100%}
+}
 </style>
 </head>
 <body>
@@ -320,11 +346,8 @@ footer nav a{color:var(--muted)}
     <div class="wrap">
       <span class="eyebrow" data-reveal data-line>Mi enfoque</span>
       <h2 data-reveal="1" style="margin-top:22px;max-width:760px">Rigor médico, <em>atención a medida</em></h2>
-      <div data-stagger class="grid3">
-        <div><span class="roman">I</span><h3>Diagnóstico preciso</h3><p>Pruebas completas antes de indicar cualquier intervención.</p></div>
-        <div><span class="roman">II</span><h3>Decisión informada</h3><p>Te explico técnica, resultados esperables y riesgos con total transparencia.</p></div>
-        <div><span class="roman">III</span><h3>Seguimiento personal</h3><p>Te acompaño en cada revisión hasta tu recuperación completa.</p></div>
-      </div>
+      <div data-stagger class="steps" role="list"><div class="step"><svg class="ic" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5.5 5.5"/></svg><div class="rail"><span class="roman">I</span></div><h3>Diagnóstico preciso</h3><p>Pruebas completas antes de indicar cualquier intervención.</p></div><div class="step"><svg class="ic" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg><div class="rail"><span class="roman">II</span></div><h3>Decisión informada</h3><p>Te explico técnica, resultados esperables y riesgos con total transparencia.</p></div><div class="step"><svg class="ic" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="0"/><path d="M4 10h16M8 3v4M16 3v4M9 15l2 2 4-4"/></svg><div class="rail"><span class="roman">III</span></div><h3>Seguimiento personal</h3><p>Te acompaño en cada revisión hasta tu recuperación completa.</p></div></div>
+      <div data-reveal class="steps-cta"><a class="btn" href="#cita">Pedir cita</a></div>
     </div>
   </section>
 

@@ -243,6 +243,29 @@ footer a{color:#C3D2E3}
   html.js:not(.no-anim) [data-reveal="zoom"] img{transform:scale(1.05);transition:transform 1.2s var(--ease) var(--d,0ms)}
   html.js:not(.no-anim) [data-reveal="zoom"].is-in img{transform:none}
 }
+
+/* Proceso: pasos conectados */
+.why .step .icon{width:48px;height:48px;border-radius:2px;background:transparent;border:1px solid #6F94BF;color:#FFFFFF}
+.step .rail{display:flex;align-items:center}
+.step .num{font-weight:700;font-size:18px;letter-spacing:.12em;color:#9EC3E8;font-variant-numeric:tabular-nums;margin-right:14px}
+.step .rail::after{content:"";flex:1;height:1px;background:#6F94BF;margin-right:-18px}
+.step:last-child .rail::after{background:transparent}
+.why-cta{margin-top:48px}
+@media (max-width:960px){
+  .why-grid{gap:0}
+  .why .step{display:grid;grid-template-columns:44px 1fr;column-gap:20px;row-gap:8px;align-items:center;position:relative;padding:0 0 36px}
+  .why .step:last-child{padding-bottom:0}
+  .why .step .icon{grid-column:2;grid-row:1;justify-self:start}
+  .step .rail{display:block;grid-column:1;grid-row:1;justify-self:center}
+  .step .rail::after{display:none}
+  .step .num{display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin:0;border:1px solid #6F94BF;border-radius:2px;background:var(--navy);font-size:16px;letter-spacing:.04em;position:relative;z-index:1}
+  .why .step h3{grid-column:2;grid-row:2;align-self:start}
+  .why .step p{grid-column:2;grid-row:3;align-self:start}
+  .why .step::before{content:"";position:absolute;left:21px;width:1px;top:0;bottom:0;background:#6F94BF}
+  .why .step:first-child::before{top:24px}
+  .why .step:last-child::before{bottom:auto;height:24px}
+  .why-cta .btn{width:100%}
+}
 </style>
 </head>
 <body>
@@ -331,11 +354,8 @@ footer a{color:#C3D2E3}
         <span class="kicker">Por qué confiar</span>
         <h2 id="por-que">Su vista, en buenas manos</h2>
       </div>
-      <div data-stagger class="why-grid">
-        <div class="why-item"><span class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M2.5 12c2.2-4 5.4-6 9.5-6s7.3 2 9.5 6c-2.2 4-5.4 6-9.5 6s-7.3-2-9.5-6Z" stroke="#FFFFFF" stroke-width="1.7"/><circle cx="12" cy="12" r="3" stroke="#FFFFFF" stroke-width="1.7"/></svg></span><h3>Diagnóstico completo</h3><p>Pruebas necesarias antes de indicar cualquier tratamiento o cirugía.</p></div>
-        <div class="why-item"><span class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M5 6.5h14M5 12h14M5 17.5h9" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round"/></svg></span><h3>Información clara</h3><p>Le explico la técnica, los resultados y los riesgos, sin prisas y con palabras sencillas.</p></div>
-        <div class="why-item"><span class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.5" r="3.5" stroke="#FFFFFF" stroke-width="1.7"/><path d="M5 20c1.2-3.5 3.8-5.5 7-5.5s5.8 2 7 5.5" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round"/></svg></span><h3>Seguimiento personal</h3><p>Le atiendo yo misma en las revisiones hasta su recuperación completa.</p></div>
-      </div>
+      <div data-stagger class="why-grid" role="list"><div class="why-item step"><span class="icon"><svg class="ic" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5.5 5.5"/></svg></span><div class="rail"><span class="num">01</span></div><h3>Diagnóstico completo</h3><p>Pruebas necesarias antes de indicar cualquier tratamiento o cirugía.</p></div><div class="why-item step"><span class="icon"><svg class="ic" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg></span><div class="rail"><span class="num">02</span></div><h3>Información clara</h3><p>Le explico la técnica, los resultados y los riesgos, sin prisas y con palabras sencillas.</p></div><div class="why-item step"><span class="icon"><svg class="ic" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="0"/><path d="M4 10h16M8 3v4M16 3v4M9 15l2 2 4-4"/></svg></span><div class="rail"><span class="num">03</span></div><h3>Seguimiento personal</h3><p>Le atiendo yo misma en las revisiones hasta su recuperación completa.</p></div></div>
+      <div data-reveal class="why-cta"><a class="btn" href="#cita">Pedir cita</a></div>
     </div>
   </section>
 
