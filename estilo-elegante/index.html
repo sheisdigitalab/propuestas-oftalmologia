@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<script>(function(){var h=document.documentElement;h.classList.add("js");setTimeout(function(){if(!h.classList.contains("anim"))h.classList.add("no-anim")},2500)})()</script>
+<script src="../js/animaciones.js" defer></script>
+<title>Propuesta web · Estilo elegante · Dra. Katia Sotelo</title>
+<meta name="description" content="Propuesta de diseño para la web de la Dra. Katia Sotelo. Las fotos y los datos entre corchetes son de ejemplo.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Propuesta web · Estilo elegante">
+<meta property="og:description" content="Propuesta de diseño para la web de la Dra. Katia Sotelo. Las fotos y los datos entre corchetes son de ejemplo.">
+<meta property="og:url" content="https://sheisdigitalab.github.io/propuestas-oftalmologia/estilo-elegante/">
+<meta property="og:image" content="https://sheisdigitalab.github.io/propuestas-oftalmologia/img/og-estilo-elegante.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Portada de la propuesta web Estilo elegante para la Dra. Katia Sotelo">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/playfair-display-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:400;font-display:swap;src:url('../fonts/playfair-display-latin-400-italic.woff2') format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:500;font-display:swap;src:url('../fonts/playfair-display-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:500;font-display:swap;src:url('../fonts/playfair-display-latin-500-italic.woff2') format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/playfair-display-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:600;font-display:swap;src:url('../fonts/playfair-display-latin-600-italic.woff2') format('woff2')}
+@font-face{font-family:Jost;font-style:normal;font-weight:300;font-display:swap;src:url('../fonts/jost-latin-300-normal.woff2') format('woff2')}
+@font-face{font-family:Jost;font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/jost-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:Jost;font-style:normal;font-weight:500;font-display:swap;src:url('../fonts/jost-latin-500-normal.woff2') format('woff2')}
+
+:root{
+  --bg:#101C1A; --bg2:#172623; --panel:#1D2C29; --line:#33443F;
+  --text:#EDE6DA; --muted:#BDB5A8; --gold:#D4BC94; --gold-2:#EAD9BC;
+  --serif:'Playfair Display',Georgia,serif; --sans:Jost,system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-padding-bottom:96px;scroll-padding-top:84px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.7}
+h1,h2,h3,p{margin:0}
+a{color:var(--gold)} a:hover{color:var(--gold-2)}
+main:focus{outline:none}
+.skip{position:absolute;left:16px;top:-100px;z-index:100;background:var(--gold);color:var(--bg);padding:14px 22px;font:500 14px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+.skip:focus{top:16px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold-2);outline-offset:4px}
+.widget a:focus-visible{outline-color:var(--bg)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 56px}
+.eyebrow{display:inline-flex;align-items:center;gap:16px;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:400}
+.eyebrow::before{content:"";width:48px;height:1px;background:var(--gold)}
+h1,h2{font-family:var(--serif);font-weight:400;line-height:1.12;letter-spacing:-.01em}
+h1{font-size:clamp(40px,3.6vw + 14px,68px)}
+h2{font-size:clamp(30px,2vw + 14px,48px)}
+h3{font-family:var(--serif);font-weight:500;font-size:24px;line-height:1.15}
+em{font-style:italic;color:var(--gold)}
+.lead{font-size:18px;color:var(--muted);max-width:540px;line-height:1.8}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:56px;padding:12px 34px;font-size:14px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;text-decoration:none;background:var(--gold);color:var(--bg)}
+.btn:hover{background:var(--gold-2);color:var(--bg)}
+.link{display:inline-flex;align-items:center;min-height:56px;padding:0 4px;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--text);text-decoration:none;border-bottom:1px solid #5E6E6A}
+.link:hover{color:var(--gold)}
+.photo{display:block;width:100%;height:100%;object-fit:cover}
+.ph.photo-box{padding:0;overflow:hidden}
+.ph{background:var(--panel);display:flex;align-items:flex-end;justify-content:flex-end;padding:28px;color:#8E9C97;font-size:14px}
+section{padding:120px 0}
+
+/* Cabecera */
+header{position:fixed;top:var(--aviso-off,36px);left:0;right:0;z-index:50;background:transparent}
+header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding-top:32px;padding-bottom:32px}
+.logo{font-family:var(--serif);font-size:24px;letter-spacing:.06em;color:var(--text);text-decoration:none}
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:32px;font-size:14px;letter-spacing:.14em;text-transform:uppercase}
+nav a{color:var(--text);text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
+nav .btn{min-height:48px;padding:0 26px}
+.nav-toggle{display:none;align-items:center;gap:12px;min-height:48px;padding:0 20px;background:transparent;color:var(--text);border:1px solid var(--gold);font:400 13px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
+.nav-toggle svg{flex:none}
+
+/* Cabecera al bajar */
+html.is-scrolled header{background:var(--bg);box-shadow:0 6px 24px rgba(0,0,0,.35)}
+html.is-scrolled header .wrap{padding-top:14px;padding-bottom:14px}
+.hero .ph img{position:absolute;left:0;top:-6%;width:100%;height:112%}
+.link:focus-visible{color:var(--gold)}
+nav a:hover,nav a:focus-visible{color:var(--gold)}
+nav a.btn:hover,nav a.btn:focus-visible{color:var(--bg)}
+
+/* Hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:140px 0 100px}
+.hero .ph{position:absolute;right:0;top:0;bottom:0;width:44%}
+.hero .wrap{position:relative;width:100%}
+.hero-text{max-width:720px;display:flex;flex-direction:column;gap:30px}
+.actions{display:flex;flex-wrap:wrap;gap:18px;align-items:center}
+
+/* Cirugías */
+.surgery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:72px;align-items:center;margin-top:80px}
+.surgery .ph{height:520px}
+.surgery-text{display:flex;flex-direction:column;gap:22px}
+.num{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--gold)}
+.list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.list li{padding:14px 0;border-bottom:1px solid var(--line);color:var(--text)}
+.reverse .ph{order:2}
+
+/* Enfoque */
+.approach{background:var(--bg2)}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:64px}
+.grid3>div{background:var(--bg2);padding:48px 40px;display:flex;flex-direction:column;gap:14px}
+.roman{font-family:var(--serif);font-size:36px;color:var(--gold);line-height:1}
+.grid3 p{color:var(--muted);font-size:16px}
+
+/* Doctora */
+.doctor{display:grid;grid-template-columns:5fr 7fr;gap:88px;align-items:center}
+.doctor .ph{height:600px}
+.quote{font-family:var(--serif);font-style:italic;font-size:24px;line-height:1.5;color:var(--gold-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:28px 0}
+dl{margin:0;border-top:1px solid var(--line)}
+dl div{display:flex;flex-wrap:wrap;gap:6px 28px;padding:16px 0;border-bottom:1px solid var(--line)}
+dt{flex:0 0 150px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+dd{margin:0;flex:1 1 260px}
+
+/* Preguntas */
+.faq{display:grid;grid-template-columns:4fr 8fr;gap:80px}
+.faq-item{padding:30px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
+.faq-list{border-top:1px solid var(--line)}
+.faq-item p{color:var(--muted)}
+
+/* Cita */
+.booking{background:var(--bg2)}
+.booking-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:80px;align-items:center}
+.centre{display:flex;flex-direction:column;gap:4px;padding:20px 0;border-bottom:1px solid var(--line)}
+.centres{border-top:1px solid var(--line);margin-top:12px}
+.centre strong{font-family:var(--serif);font-weight:500;font-size:20px}
+.widget{background:var(--text);color:var(--bg);padding:44px;display:flex;flex-direction:column;gap:24px}
+.widget .who{display:flex;align-items:center;gap:16px}
+.avatar{width:64px;height:64px;border-radius:999px;background:#CFC4B2;flex:none}
+.days{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;text-align:center;font-size:14px}
+.days div{border:1px solid #CFC4B2;padding:14px 4px}
+.days .on{background:var(--bg);color:var(--text);border-color:var(--bg)}
+.widget .btn{background:var(--bg);color:var(--text)}
+.widget small{text-align:center;color:#6B645A}
+
+/* Pie */
+footer{border-top:1px solid var(--line);padding:56px 0;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center}
+footer nav{font-size:13px}
+footer nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 8px}
+footer nav a{color:var(--muted)}
+
+.wa{position:fixed;right:28px;bottom:28px;width:60px;height:60px;border-radius:999px;background:var(--gold);display:flex;align-items:center;justify-content:center;box-shadow:0 14px 30px rgba(0,0,0,.35);z-index:10}
+
+@media (max-width:900px){
+  .wrap{padding:0 22px}
+  section{padding:80px 0}
+  header{position:sticky;top:0;background:var(--bg)}
+  .hero .ph img{position:static;top:auto;height:100%}
+  #site-nav.open{max-height:calc(100vh - 110px);overflow-y:auto}
+  .hero{min-height:auto;padding:40px 0 0;flex-direction:column}
+  .hero .ph{position:static;width:100%;height:360px;order:2;margin-top:48px}
+  .surgery,.doctor,.faq,.booking-grid{grid-template-columns:1fr;gap:40px}
+  .reverse .ph{order:0}
+  .surgery .ph,.doctor .ph{height:360px}
+  .grid3{grid-template-columns:1fr}
+  nav{gap:18px}
+  .nav-toggle{display:inline-flex}
+  #site-nav{flex:1 1 100%;flex-direction:column;align-items:stretch;gap:0}
+  html.js #site-nav:not(.open){display:none}
+  #site-nav a{border-top:1px solid var(--line);min-height:48px}
+  #site-nav a.btn{border-top:0;margin:12px 0 4px;justify-content:center}
+}
+@media (min-width:901px) and (max-width:1240px){
+  .hero-text{max-width:calc(56vw - 80px)}
+}
+@media (max-width:600px){
+  .btn{padding:12px 24px}
+  .widget{padding:24px}
+  .grid3>div{padding:36px 28px}
+  .wa{right:16px;bottom:16px}
+}
+
+/* Aviso */
+.aviso{background:var(--bg2);color:var(--text);font:400 14px/20px var(--sans);text-align:center;padding:8px 16px;border-bottom:1px solid var(--line)}
+.hdr-cta{display:none}
+.nav-toggle{min-width:44px;justify-content:center}
+@media (max-width:900px){
+  .hdr-cta{display:inline-flex;min-height:44px;padding:0 20px;font-size:16px}
+  #site-nav a.btn{display:none}
+  header .wrap{padding-top:12px;padding-bottom:12px;gap:10px}
+  .logo{flex:1 1 auto}
+  #site-nav a{font-size:16px}
+  .actions{flex-direction:column;align-items:stretch}
+  .actions .btn{width:100%}
+  .actions .link{align-self:center}
+  .wa{position:static;width:100%;height:auto;min-height:56px;border-radius:0;gap:12px;padding:12px 20px;box-shadow:none;order:9;flex-basis:100%}
+  .wa::after{content:"Escribir por WhatsApp";color:var(--bg);font:500 16px var(--sans);letter-spacing:.08em;text-transform:uppercase}
+}
+@media (max-width:900px){
+  .eyebrow{font-size:16px;letter-spacing:.14em}
+  .eyebrow::before{width:32px}
+  .btn,.link,.days,.widget small,footer,footer nav,dt,.nav-toggle,.skip{font-size:16px}
+  .widget [style*="font-size:14px"]{font-size:16px!important}
+  .logo{min-height:44px;display:inline-flex;align-items:center}
+  .hero .ph img{object-position:center 30%!important}
+  .centre a{display:inline-flex;align-items:center;min-height:44px}
+}
+@media (max-width:760px){
+  .hero .ph{height:min(340px,92vw)}
+  .surgery .ph,.doctor .ph{height:min(320px,88vw)}
+  h1,h2{overflow-wrap:break-word}
+}
+@media (max-width:560px){
+  .nav-toggle .lbl{display:none}
+  .nav-toggle{width:48px;padding:0}
+}
+@media (max-width:420px){
+  .logo{font-size:17px;letter-spacing:.02em}
+  .hdr-cta{padding:0 12px;letter-spacing:.06em}
+  header .wrap{gap:8px}
+}
+
+/* Movimiento (solo si el usuario no pide reducirlo). Estados ocultos solo con .js */
+@media (prefers-reduced-motion:no-preference){
+  :root{--ease:cubic-bezier(.22,.61,.36,1)}
+  header,header .wrap{transition:background-color .4s var(--ease),box-shadow .4s var(--ease),padding .4s var(--ease)}
+  .btn,.link,nav a{transition:background-color .3s var(--ease),color .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease)}
+  .btn:hover,.btn:focus-visible{transform:translateY(-2px)}
+  .btn:hover{box-shadow:0 10px 24px rgba(0,0,0,.35)}
+  .surgery .ph img,.doctor .ph img{transition:transform .9s var(--ease)}
+  .surgery .ph:hover img,.doctor .ph:hover img{transform:scale(1.03)}
+
+  html.js:not(.no-anim) [data-reveal],html.js:not(.no-anim) [data-stagger]>*{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease) var(--d,0ms),transform .7s var(--ease) var(--d,0ms)}
+  html.js:not(.no-anim) [data-reveal].is-in,html.js:not(.no-anim) [data-stagger]>.is-in{opacity:1;transform:none}
+  /* La máscara se aplica a la imagen (si se recortara el contenedor, IntersectionObserver no lo detectaría) */
+  html.js:not(.no-anim) [data-reveal="mask"]{opacity:0;transform:none;transition:opacity .5s var(--ease) var(--d,0ms)}
+  html.js:not(.no-anim) [data-reveal="mask"].is-in{opacity:1}
+  html.js:not(.no-anim) [data-reveal="mask"] img{clip-path:inset(0 0 100% 0);transform:scale(1.05);transition:clip-path 1s var(--ease) var(--d,0ms),transform 1.4s var(--ease) var(--d,0ms)}
+  html.js:not(.no-anim) [data-reveal="mask"].is-in img{clip-path:inset(0 0 0 0);transform:none}
+  @media (max-width:760px){
+    html.js:not(.no-anim) [data-reveal],html.js:not(.no-anim) [data-stagger]>*{transform:translateY(16px);transition-duration:.5s}
+    html.js:not(.no-anim) [data-reveal="mask"]{transform:none}
+    html.js:not(.no-anim) [data-reveal="mask"] img{transition-duration:.8s}
+  }
+  html.js:not(.no-anim) [data-line]::before{transform:scaleX(0);transform-origin:left center;transition:transform .9s var(--ease) calc(var(--d,0ms) + 150ms)}
+  html.js:not(.no-anim) [data-line].is-in::before{transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<div class="aviso">Propuesta de diseño · Las fotos y los datos entre corchetes son de ejemplo</div>
+
+<header data-header>
+  <div class="wrap">
+    <a class="logo" href="#inicio">KATIA SOTELO</a>
+    <a class="btn hdr-cta" href="#cita">Reservar</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menú"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="lbl">Menú</span></button>
+    <nav id="site-nav" aria-label="Menú principal">
+      <a href="#cirugias">Cirugías</a>
+      <a href="#enfoque">Enfoque</a>
+      <a href="#doctora">La doctora</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="btn" href="#cita">Reservar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido" tabindex="-1">
+  <section class="hero" id="inicio">
+    <div data-reveal="mask" data-parallax class="ph photo-box"><img class="photo" src="../img/p2-doctora-hero-1000.webp" srcset="../img/p2-doctora-hero-600.webp 600w, ../img/p2-doctora-hero-1000.webp 1000w" sizes="(max-width: 900px) 100vw, 44vw" width="1000" height="1333" alt="Foto de muestra: la doctora con bata blanca, sonriendo a cámara con vegetación de fondo en tonos cálidos y suaves" fetchpriority="high" style="object-position:center 20%"></div>
+    <div class="wrap">
+      <div class="hero-text">
+        <span data-reveal="1" data-line class="eyebrow">Oftalmología y cirugía ocular</span>
+        <h1 data-reveal="2">La belleza de <em>ver con claridad</em></h1>
+        <p data-reveal="3" class="lead">Cirugía de cataratas y de párpados con un enfoque exclusivo y personal, donde cada detalle cuenta: tu visión y tu mirada.</p>
+        <div data-reveal="4" class="actions">
+          <a class="btn" href="#cita">Solicitar valoración</a>
+          <a class="link" href="#doctora">Conocer a la doctora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cirugias">
+    <div class="wrap">
+      <span class="eyebrow" data-reveal data-line>Especialidades</span>
+      <h2 data-reveal="1" style="margin-top:22px;max-width:760px">Dos cirugías, <em>una misma exigencia</em></h2>
+
+      <div class="surgery">
+        <div data-reveal="mask" class="ph photo-box"><img class="photo" src="../img/p2-cataratas-960.webp" srcset="../img/p2-cataratas-560.webp 560w, ../img/p2-cataratas-960.webp 960w" sizes="(max-width: 900px) 100vw, 528px" width="960" height="960" alt="Foto de muestra: primer plano de un ojo de iris claro bajo una luz cálida y suave" loading="lazy" decoding="async" style="object-position:center"></div>
+        <div data-reveal class="surgery-text">
+          <span class="num">01</span>
+          <h3>Cirugía de cataratas</h3>
+          <p class="lead">Cuando el cristalino pierde transparencia, la visión se nubla y los colores se apagan. Lo sustituimos por una lente intraocular elegida para tu caso, en una intervención ambulatoria.</p>
+          <ul class="list">
+            <li>Estudio preoperatorio completo</li>
+            <li>Lente intraocular adaptada a tu vista y tu estilo de vida</li>
+            <li>Revisiones postoperatorias personales</li>
+          </ul>
+          <a class="link" href="#cirugias" style="align-self:flex-start">Todo sobre cataratas</a>
+        </div>
+      </div>
+
+      <div class="surgery reverse">
+        <div data-reveal="mask" class="ph photo-box"><img class="photo" src="../img/p2-parpados-960.webp" srcset="../img/p2-parpados-560.webp 560w, ../img/p2-parpados-960.webp 960w" sizes="(max-width: 900px) 100vw, 528px" width="960" height="960" alt="Foto de muestra: perfil de una mujer con los párpados cerrados y la piel iluminada con luz cálida" loading="lazy" decoding="async" style="object-position:center"></div>
+        <div data-reveal class="surgery-text">
+          <span class="num">02</span>
+          <h3>Cirugía de párpados</h3>
+          <p class="lead">La mirada transmite quién eres. Tratamos el párpado caído, el exceso de piel y las lesiones palpebrales buscando un resultado funcional, natural y armónico.</p>
+          <ul class="list">
+            <li>Blefaroplastia</li>
+            <li>Ptosis palpebral</li>
+            <li>Chalazión y lesiones del párpado</li>
+          </ul>
+          <a class="link" href="#cirugias" style="align-self:flex-start">Todo sobre párpados</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="approach" id="enfoque">
+    <div class="wrap">
+      <span class="eyebrow" data-reveal data-line>Mi enfoque</span>
+      <h2 data-reveal="1" style="margin-top:22px;max-width:760px">Rigor médico, <em>atención a medida</em></h2>
+      <div data-stagger class="grid3">
+        <div><span class="roman">I</span><h3>Diagnóstico preciso</h3><p>Pruebas completas antes de indicar cualquier intervención.</p></div>
+        <div><span class="roman">II</span><h3>Decisión informada</h3><p>Te explico técnica, resultados esperables y riesgos con total transparencia.</p></div>
+        <div><span class="roman">III</span><h3>Seguimiento personal</h3><p>Te acompaño en cada revisión hasta tu recuperación completa.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="doctora">
+    <div class="wrap doctor">
+      <div data-reveal="mask" class="ph photo-box"><img class="photo" src="../img/p2-doctora-800.webp" srcset="../img/p2-doctora-480.webp 480w, ../img/p2-doctora-800.webp 800w" sizes="(max-width: 900px) 100vw, 433px" width="800" height="1109" alt="Foto de muestra: retrato de la doctora con bata blanca, de gesto cercano y sereno, en tonos cálidos" loading="lazy" decoding="async" style="object-position:center 30%"></div>
+      <div data-reveal style="display:flex;flex-direction:column;gap:26px">
+        <span class="eyebrow" data-reveal data-line>La doctora</span>
+        <h2>Dra. Katia Sotelo</h2>
+        <p class="quote">“Cada mirada es única. Mi compromiso es cuidarla con la precisión y el tiempo que merece.”</p>
+        <dl>
+          <div><dt>Formación</dt><dd>[Licenciatura, especialidad MIR y hospital]</dd></div>
+          <div><dt>Experiencia</dt><dd>[Hospitales y clínicas]</dd></div>
+          <div><dt>Sociedades</dt><dd>[Sociedades médicas]</dd></div>
+          <div><dt>Colegiada</dt><dd>Nº [——]</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="approach" id="preguntas">
+    <div class="wrap faq">
+      <div data-reveal style="display:flex;flex-direction:column;gap:20px">
+        <span class="eyebrow" data-reveal data-line>Preguntas</span>
+        <h2>Antes de <em>tu cirugía</em></h2>
+        <p class="lead">Cualquier otra duda la resolvemos en la consulta de valoración.</p>
+      </div>
+      <div data-stagger class="faq-list">
+        <div class="faq-item"><h3>¿La operación de cataratas duele?</h3><p>Se realiza con anestesia local y la mayoría de pacientes solo notan una ligera presión. Es ambulatoria: vuelves a casa el mismo día.</p></div>
+        <div class="faq-item"><h3>¿Cuándo es el momento de operarse?</h3><p>Cuando la catarata empieza a limitar tu día a día: leer, conducir o ver la televisión. Lo valoramos en consulta.</p></div>
+        <div class="faq-item"><h3>¿La cirugía de párpados es solo estética?</h3><p>No siempre. Un párpado caído puede reducir el campo de visión. Valoramos si la indicación es funcional, estética o ambas.</p></div>
+        <div class="faq-item"><h3>¿Cómo es la recuperación?</h3><p>Depende de cada intervención. Antes de la cirugía te explico los cuidados y el calendario de revisiones.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking" id="cita" style="background:var(--bg)">
+    <div class="wrap booking-grid">
+      <div data-reveal style="display:flex;flex-direction:column;gap:24px">
+        <span class="eyebrow" data-reveal data-line>Reservar</span>
+        <h2>Tu consulta de <em>valoración</em></h2>
+        <p class="lead">Elige día y hora online, en cualquier momento. Recibirás la confirmación por email.</p>
+        <div class="centres">
+          <div class="centre"><strong>[Nombre del centro 1]</strong><span>[Dirección, población] · <a href="#cita">Cómo llegar</a></span></div>
+          <div class="centre"><strong>[Nombre del centro 2]</strong><span>[Dirección, población] · <a href="#cita">Cómo llegar</a></span></div>
+        </div>
+      </div>
+      <div data-reveal="1" class="widget">
+        <div class="who"><img class="avatar" src="../img/avatar-p2-128.webp" width="64" height="64" alt="Foto de muestra de la doctora" loading="lazy" decoding="async" style="object-fit:cover"><div><div style="font-family:var(--serif);font-size:22px;font-weight:500">Dra. Katia Sotelo</div><div style="font-size:14px;color:#6B645A">Oftalmóloga</div></div></div>
+        <div class="days"><div class="on"><b>Lun</b><br>10:00</div><div><b>Mar</b><br>16:30</div><div><b>Jue</b><br>09:15</div><div><b>Vie</b><br>12:00</div></div>
+        <a class="btn" href="#cita">Ver horas disponibles</a>
+        <small>Ejemplo: aquí irá tu calendario real de Doctoralia</small>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><span style="font-family:var(--serif);font-size:20px;color:var(--text);letter-spacing:.06em">KATIA SOTELO</span><br>Oftalmóloga · Nº de colegiada [——] · Registro sanitario [——]</span>
+    <nav aria-label="Enlaces legales"><a href="#inicio">Aviso legal</a><a href="#inicio">Privacidad</a><a href="#inicio">Cookies</a></nav>
+    <a class="wa" href="https://wa.me/" aria-label="Escribir por WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20Z" stroke="#101C1A" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.2 8.8c.3 2.6 2.4 4.7 5 5l1-1.2-1.6-.9-.8.7c-.9-.4-1.8-1.3-2.2-2.2l.7-.8-.9-1.6-1.2 1Z" fill="#101C1A"/></svg>
+</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var d=document,b=d.querySelector('.nav-toggle'),n=d.getElementById('site-nav');
+  if(!b||!n)return;
+  function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',String(o))}
+  b.addEventListener('click',function(){set(b.getAttribute('aria-expanded')!=='true')});
+  n.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});
+  d.addEventListener('keydown',function(e){if(e.key==='Escape'&&b.getAttribute('aria-expanded')==='true'){set(false);b.focus()}});
+})();
+</script>
+</body>
+</html>

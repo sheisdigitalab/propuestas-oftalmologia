@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<script>(function(){var h=document.documentElement;h.classList.add("js");setTimeout(function(){if(!h.classList.contains("anim"))h.classList.add("no-anim")},2500)})()</script>
+<script src="../js/animaciones.js" defer></script>
+<title>Propuesta web · Estilo cálido · Dra. Katia Sotelo</title>
+<meta name="description" content="Propuesta de diseño para la web de la Dra. Katia Sotelo. Las fotos y los datos entre corchetes son de ejemplo.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Propuesta web · Estilo cálido">
+<meta property="og:description" content="Propuesta de diseño para la web de la Dra. Katia Sotelo. Las fotos y los datos entre corchetes son de ejemplo.">
+<meta property="og:url" content="https://sheisdigitalab.github.io/propuestas-oftalmologia/estilo-calido/">
+<meta property="og:image" content="https://sheisdigitalab.github.io/propuestas-oftalmologia/img/og-estilo-calido.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Portada de la propuesta web Estilo cálido para la Dra. Katia Sotelo">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/plus-jakarta-sans-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:500;font-display:swap;src:url('../fonts/plus-jakarta-sans-latin-500-normal.woff2') format('woff2');}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/plus-jakarta-sans-latin-600-normal.woff2') format('woff2');}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700;font-display:swap;src:url('../fonts/plus-jakarta-sans-latin-700-normal.woff2') format('woff2');}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:800;font-display:swap;src:url('../fonts/plus-jakarta-sans-latin-800-normal.woff2') format('woff2');}
+html{scroll-padding-bottom:96px;scroll-padding-top:90px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:#FAF6F0}
+a{color:#24413A}a:hover{color:#152A25}
+h1,h2,h3,p{margin:0}
+main:focus{outline:none}
+h1,h2,h3{font-family:'Plus Jakarta Sans',system-ui,sans-serif;letter-spacing:-.02em}
+h1{font-size:clamp(40px,2vw + 28px,56px);font-weight:800;line-height:1.08}
+h2{font-size:clamp(30px,1.2vw + 22px,42px);font-weight:700;line-height:1.15}
+h3{font-size:20px;font-weight:700;line-height:1.3;letter-spacing:-.01em}
+h3.t-lg{font-size:clamp(24px,1vw + 16px,30px);line-height:1.2;letter-spacing:-.02em}
+.photo{display:block;width:100%;height:100%;object-fit:cover}
+header[data-header]{position:sticky;top:0;z-index:50}
+html.is-scrolled header[data-header]{box-shadow:0 6px 24px rgba(42,38,34,.09)}
+html.is-scrolled header[data-header]>div{padding-top:12px!important;padding-bottom:12px!important}
+.photo-frame::before{content:"";position:absolute;inset:0;border:1.5px solid #CDB497;border-radius:6px;translate:18px 18px}
+.btn1:hover,.btn1:focus-visible{background:#152A25!important}
+.btn2:hover,.btn2:focus-visible{background:#EEF2EF!important}
+.hero-photo{z-index:3}
+@media (min-width:1000px){.hero-photo{translate:0 136px}}
+.btn1 svg,.lnk svg{transition:none}
+.btn1:hover svg,.btn1:focus-visible svg,.lnk:hover svg,.lnk:focus-visible svg{translate:4px 0}
+.skip{position:absolute;left:16px;top:-100px;z-index:100;background:#24413A;color:#FFFFFF;padding:14px 22px;border-radius:6px;font:600 16px 'Plus Jakarta Sans',system-ui,sans-serif;text-decoration:none}
+.skip:focus{top:16px}
+a:focus-visible,button:focus-visible{outline:3px solid #24413A;outline-offset:3px;box-shadow:0 0 0 3px #FFFFFF}
+.topbar a{display:inline-flex;align-items:center;min-height:44px;margin:-13px 0}
+#site-nav a{display:inline-flex;align-items:center;min-height:44px}
+footer nav a{display:inline-flex;align-items:center;min-height:44px}
+footer nav[aria-label="Páginas"]{gap:0!important}
+.nav-toggle{display:none;align-items:center;gap:10px;min-height:48px;padding:0 18px;background:transparent;color:#24413A;border:1.5px solid #24413A;border-radius:6px;font:600 15px 'Plus Jakarta Sans',system-ui,sans-serif;cursor:pointer}
+@media (max-width:900px){
+  .nav-toggle{display:inline-flex}
+  #site-nav{flex:1 1 100%!important;flex-direction:column!important;align-items:stretch!important;gap:0!important}
+  html.js #site-nav:not(.open){display:none!important}
+  #site-nav a{border-top:1px solid #E5DBCD;min-height:48px}
+  #site-nav a.cta{border-top:0;margin:12px 0 4px;justify-content:center}
+}
+@media (max-width:760px){
+  section>div,header>div,footer>div{padding-left:20px!important;padding-right:20px!important}
+  section>div{padding-top:64px!important;padding-bottom:64px!important;gap:40px!important}
+  [style*="gap: 72px"],[style*="gap: 80px"]{gap:40px!important}
+  .ph-box{height:340px!important}
+  .widget{padding:24px!important}
+  .wa-float{right:16px!important;bottom:16px!important}
+  .photo-frame::before{translate:12px 12px}
+  #site-nav.open{max-height:calc(100vh - 130px);overflow-y:auto}
+  #inicio [style*="repeat(3"]{grid-template-columns:1fr!important}
+}
+
+
+/* Aviso */
+.aviso{background:#E5DBCD;color:#2A2622;font:500 14px/20px 'Plus Jakarta Sans',system-ui,sans-serif;text-align:center;padding:8px 16px}
+/* Cabecera: botón Pedir cita visible en móvil */
+.hdr-cta{display:none;align-items:center;justify-content:center;min-height:44px;padding:0 16px;background:#24413A;color:#FFFFFF;border-radius:6px;font-weight:600;font-size:16px;text-decoration:none;white-space:nowrap}
+.hdr-cta:hover{color:#FFFFFF}
+.lnk-ci{display:inline-flex;align-items:center;min-height:44px}
+.nav-toggle{min-height:44px;min-width:44px;justify-content:center;font-size:16px}
+@media (max-width:900px){
+  .hdr-cta{display:inline-flex}
+  #site-nav a.cta{display:none!important}
+  header[data-header]>div{gap:10px!important;padding-top:12px!important;padding-bottom:12px!important}
+  header .brand{flex:1 1 auto;min-width:0;min-height:44px}
+  #site-nav a{font-size:16px!important}
+  [style*="font-size: 11px"],[style*="font-size: 13px"],[style*="font-size: 14px"],[style*="font-size: 15px"]{font-size:16px!important}
+  [style*="letter-spacing: 0.2em"]{letter-spacing:.1em!important}
+  .wa-float{box-sizing:border-box;position:static!important;width:100%!important;height:auto!important;min-height:56px;border-radius:6px!important;gap:12px;padding:12px 20px;box-shadow:none!important;border:1px solid #4A6B62;z-index:auto!important}
+  .wa-float::after{content:"Escribir por WhatsApp";color:#FFFFFF;font:600 16px 'Plus Jakarta Sans',system-ui,sans-serif}
+}
+@media (max-width:760px){
+  .topbar{display:none}
+  .actions{flex-direction:column;align-items:stretch}
+  .actions a{justify-content:center;width:100%}
+  h1{overflow-wrap:break-word}
+  .ph-box{height:min(340px,92vw)!important}
+}
+@media (max-width:560px){
+  header .brand-sub{display:none}
+  .nav-toggle .lbl{display:none}
+  .nav-toggle{width:48px;padding:0}
+}
+@media (max-width:420px){
+  header .brand>svg{display:none}
+  header .brand-name{font-size:17px!important}
+  header[data-header]>div{gap:8px!important}
+  .hdr-cta{padding:0 12px}
+}
+
+/* Movimiento (solo si el usuario no pide reducirlo). Estados ocultos solo con .js */
+@media (prefers-reduced-motion:no-preference){
+  :root{--ease:cubic-bezier(.22,.61,.36,1)}
+  header[data-header],header[data-header]>div{transition:box-shadow .4s var(--ease),padding .4s var(--ease)}
+  .btn1,.btn2,.lnk,.wa-float{transition:background-color .3s var(--ease),color .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease)}
+  .btn1:hover,.btn1:focus-visible,.btn2:hover,.btn2:focus-visible,.wa-float:hover,.wa-float:focus-visible{transform:translateY(-2px)}
+  .btn1:hover{box-shadow:0 10px 22px rgba(28,53,48,.28)}
+  .btn1 svg,.lnk svg{transition:translate .3s var(--ease)}
+  .card-h{transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+  .card-h:hover{transform:translateY(-4px);box-shadow:0 22px 44px rgba(42,38,34,.16)}
+  .ph-box:not(.hero-ph) img{transition:transform .9s var(--ease)}
+  .ph-box:not(.hero-ph):hover img{transform:scale(1.04)}
+
+  html.js:not(.no-anim) [data-reveal],html.js:not(.no-anim) [data-stagger]>*{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease) var(--d,0ms),transform .7s var(--ease) var(--d,0ms)}
+  html.js:not(.no-anim) [data-reveal].is-in,html.js:not(.no-anim) [data-stagger]>.is-in{opacity:1;transform:none}
+  html.js:not(.no-anim) [data-reveal="zoom"]{transform:none;transition:opacity .9s var(--ease) var(--d,0ms)}
+  @media (max-width:760px){
+    html.js:not(.no-anim) [data-reveal],html.js:not(.no-anim) [data-stagger]>*{transform:translateY(16px);transition-duration:.5s}
+    html.js:not(.no-anim) [data-reveal="zoom"]{transform:none}
+    html.js:not(.no-anim) [data-reveal="zoom"] img{transition-duration:.9s}
+  }
+  html.js:not(.no-anim) [data-reveal="zoom"] img{transform:scale(1.05);transition:transform 1.4s var(--ease) var(--d,0ms)}
+  html.js:not(.no-anim) [data-reveal="zoom"].is-in img{transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<div style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #2A2622; background: #FAF6F0; width: 100%; position: relative;">
+
+  <!-- AVISO -->
+  <div class="aviso">Propuesta de diseño · Las fotos y los datos entre corchetes son de ejemplo</div>
+
+  <!-- BARRA SUPERIOR -->
+  <div class="topbar" style="background: #1C3530; color: #CBD8D3; font-size: 13px; letter-spacing: 0.02em;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 10px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;">
+      <span>Oftalmóloga · Nº de colegiada [——]</span>
+      <span style="display: inline-flex; gap: 22px;"><span>[Centros donde visitas]</span><a href="https://wa.me/" style="color: #FFFFFF; font-weight: 600; text-decoration: none;">WhatsApp [teléfono]</a></span>
+    </div>
+  </div>
+
+  <!-- CABECERA -->
+  <header data-header style="background: #FAF6F0; border-bottom: 1px solid #E5DBCD;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 24px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
+      <a class="brand" href="#inicio" style="display: flex; align-items: center; gap: 14px; text-decoration: none; color: #2A2622;">
+        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" aria-hidden="true"><circle cx="21" cy="21" r="20" stroke="#B5835A" stroke-width="1.2"/><path d="M8 21c3.6-5.8 8-8.7 13-8.7s9.4 2.9 13 8.7c-3.6 5.8-8 8.7-13 8.7S11.6 26.8 8 21Z" stroke="#24413A" stroke-width="1.7" stroke-linejoin="round"/><circle cx="21" cy="21" r="4.6" stroke="#24413A" stroke-width="1.7"/></svg>
+        <span style="display: flex; flex-direction: column; line-height: 1.15;">
+          <span class="brand-name" style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em;">Dra. Katia Sotelo</span>
+          <span class="brand-sub" style="font-size: 11px; color: #6E6358; letter-spacing: 0.2em; text-transform: uppercase;">Oftalmología y cirugía ocular</span>
+        </span>
+      </a>
+      <a class="hdr-cta btn1" href="#cita">Pedir cita</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menú"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#24413A" stroke-width="2" stroke-linecap="round"/></svg><span class="lbl">Menú</span></button>
+      <nav id="site-nav" aria-label="Menú principal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; font-size: 15px; font-weight: 500;">
+        <a href="#cirugias" style="color: #2A2622; text-decoration: none;">Cirugías</a>
+        <a href="#seguridad" style="color: #2A2622; text-decoration: none;">Seguridad</a>
+        <a href="#sobre-mi" style="color: #2A2622; text-decoration: none;">Trayectoria</a>
+        <a href="#preguntas" style="color: #2A2622; text-decoration: none;">Preguntas</a>
+        <a class="cta btn1" href="#cita" style="display: inline-flex; align-items: center; gap: 8px; background: #24413A; color: #FFFFFF; text-decoration: none; padding: 13px 24px; border-radius: 6px; font-weight: 600; min-height: 48px; box-sizing: border-box;">Pedir cita</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+  <!-- HERO -->
+  <section id="inicio">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 88px 40px 104px; display: flex; flex-wrap: wrap; align-items: center; gap: 72px;">
+      <div style="flex: 1 1 540px; min-width: 0; display: flex; flex-direction: column; gap: 28px;">
+        <span data-reveal="1" style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #8C5E3C;">Cirujana oftalmóloga</span>
+        <h1 data-reveal="2" style="color: #1E1B18;">Cirugía de cataratas y párpados, con <span style="color: #24413A;">precisión</span> y trato cercano</h1>
+        <p data-reveal="3" style="font-size: 19px; line-height: 1.7; color: #574D45; max-width: 540px;">Una cirugía ocular es una decisión importante. Te acompaño en todo el proceso, desde el diagnóstico hasta la recuperación, con rigor médico y explicándote cada paso.</p>
+        <div class="actions" data-reveal="4" style="display: flex; flex-wrap: wrap; gap: 14px;">
+          <a class="btn1" href="#cita" style="display: inline-flex; align-items: center; gap: 10px; background: #24413A; color: #FFFFFF; text-decoration: none; padding: 18px 30px; border-radius: 6px; font-weight: 600; font-size: 16px; min-height: 56px; box-sizing: border-box;">
+            Pedir cita de valoración
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn2" href="#cirugias" style="display: inline-flex; align-items: center; gap: 10px; color: #24413A; text-decoration: none; padding: 18px 30px; border-radius: 6px; font-weight: 600; font-size: 16px; border: 1.5px solid #24413A; min-height: 56px; box-sizing: border-box;">Ver cirugías</a>
+        </div>
+        <div data-reveal="5" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 16px; padding-top: 28px; border-top: 1px solid #E5DBCD;">
+          <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 800; font-size: 30px; letter-spacing: -0.02em; color: #24413A; line-height: 1;">[X]</span><span style="font-size: 14px; color: #6E6358;">años de experiencia</span></div>
+          <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 800; font-size: 30px; letter-spacing: -0.02em; color: #24413A; line-height: 1;">[X]</span><span style="font-size: 14px; color: #6E6358;">cirugías realizadas</span></div>
+          <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 800; font-size: 30px; letter-spacing: -0.02em; color: #24413A; line-height: 1;">[Centro]</span><span style="font-size: 14px; color: #6E6358;">hospital o centro de referencia</span></div>
+        </div>
+      </div>
+      <div class="hero-photo" style="flex: 1 1 420px; min-width: 0; position: relative; display: flex; justify-content: center;">
+        <div class="photo-frame" data-reveal="zoom" data-delay="150" style="position: relative; width: 100%; max-width: 440px;"><div class="ph-box hero-ph" style="position: relative; width: 100%; max-width: none; height: 580px; border-radius: 6px; background: #E3D5C2; overflow: hidden;"><img class="photo" src="../img/p1-doctora-hero-880.webp" srcset="../img/p1-doctora-hero-480.webp 480w, ../img/p1-doctora-hero-880.webp 880w" sizes="(max-width: 480px) 100vw, 440px" width="880" height="1160" alt="Foto de muestra: la doctora con bata blanca, sonriendo a cámara con vegetación luminosa de fondo" fetchpriority="high" style="object-position: center 15%;"></div></div>
+        <div class="card-h" style="position: absolute; left: 0; bottom: 56px; background: #FFFFFF; border-radius: 10px; padding: 18px 22px; box-shadow: 0 18px 40px rgba(42,38,34,0.12); display: flex; align-items: center; gap: 14px;">
+          <span style="width: 42px; height: 42px; border-radius: 8px; background: #EEF2EF; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2" stroke="#24413A" stroke-width="1.7"/><path d="M3.5 10h17M8 3v4M16 3v4" stroke="#24413A" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+          <span style="display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 13px; color: #6E6358;">Próxima cita disponible</span><span style="font-weight: 700; font-size: 16px;">[Día, hora]</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIRUGÍAS -->
+  <section id="cirugias" style="background: #FFFFFF;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 112px 40px; display: flex; flex-direction: column; gap: 88px;">
+      <div data-reveal style="display: flex; flex-direction: column; gap: 16px; max-width: 720px;">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #8C5E3C;">Especialidades quirúrgicas</span>
+        <h2 style="color: #1E1B18;">Dos cirugías que realizo con dedicación exclusiva</h2>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 72px;">
+        <div data-reveal class="ph-box" style="flex: 1 1 440px; min-width: 0; height: 440px; border-radius: 6px; background: #E3D5C2; overflow: hidden;"><img class="photo" src="../img/p1-cataratas-1000.webp" srcset="../img/p1-cataratas-560.webp 560w, ../img/p1-cataratas-1000.webp 1000w" sizes="(min-width: 1240px) 540px, 100vw" width="1000" height="824" alt="Foto de muestra: primer plano de un ojo azul grisáceo, sereno y natural" loading="lazy" decoding="async" style="object-position: center 45%;"></div>
+        <div data-reveal style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+          <span style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 700; font-size: 20px; color: #8C5E3C;">01</span>
+          <h3 class="t-lg" style="color: #1E1B18;">Cirugía de cataratas</h3>
+          <p style="font-size: 17px; line-height: 1.75; color: #574D45;">Si ves borroso, con colores apagados o te deslumbran las luces, puede ser una catarata. La intervención sustituye el cristalino opaco por una lente intraocular adaptada a tu vista. Es ambulatoria: vuelves a casa el mismo día.</p>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; border-top: 1px solid #E5DBCD;">
+            <li style="padding: 14px 0; border-bottom: 1px solid #E5DBCD; font-size: 16px; display: flex; gap: 12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" stroke="#24413A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Estudio preoperatorio completo</li>
+            <li style="padding: 14px 0; border-bottom: 1px solid #E5DBCD; font-size: 16px; display: flex; gap: 12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" stroke="#24413A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Lente intraocular elegida para tu caso</li>
+            <li style="padding: 14px 0; border-bottom: 1px solid #E5DBCD; font-size: 16px; display: flex; gap: 12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" stroke="#24413A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Revisiones postoperatorias conmigo</li>
+          </ul>
+          <a class="lnk" href="#cirugias" style="display: inline-flex; align-self: flex-start; align-items: center; gap: 8px; font-weight: 600; font-size: 16px; color: #24413A; text-decoration: none; min-height: 44px;">Información completa sobre cataratas
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="#24413A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap-reverse; align-items: center; gap: 72px;">
+        <div data-reveal style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+          <span style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 700; font-size: 20px; color: #8C5E3C;">02</span>
+          <h3 class="t-lg" style="color: #1E1B18;">Cirugía de párpados</h3>
+          <p style="font-size: 17px; line-height: 1.75; color: #574D45;">El párpado caído, el exceso de piel o las lesiones palpebrales pueden reducir el campo de visión y afectar a tu bienestar. Valoro cada caso para indicar la técnica más adecuada, tanto funcional como estética.</p>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; border-top: 1px solid #E5DBCD;">
+            <li style="padding: 14px 0; border-bottom: 1px solid #E5DBCD; font-size: 16px; display: flex; gap: 12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" stroke="#24413A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Blefaroplastia</li>
+            <li style="padding: 14px 0; border-bottom: 1px solid #E5DBCD; font-size: 16px; display: flex; gap: 12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" stroke="#24413A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Ptosis palpebral (párpado caído)</li>
+            <li style="padding: 14px 0; border-bottom: 1px solid #E5DBCD; font-size: 16px; display: flex; gap: 12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" stroke="#24413A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Chalazión y lesiones del párpado</li>
+          </ul>
+          <a class="lnk" href="#cirugias" style="display: inline-flex; align-self: flex-start; align-items: center; gap: 8px; font-weight: 600; font-size: 16px; color: #24413A; text-decoration: none; min-height: 44px;">Información completa sobre párpados
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="#24413A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div data-reveal class="ph-box" style="flex: 1 1 440px; min-width: 0; height: 440px; border-radius: 6px; background: #D5DDD7; overflow: hidden;"><img class="photo" src="../img/p1-parpados-1000.webp" srcset="../img/p1-parpados-560.webp 560w, ../img/p1-parpados-1000.webp 1000w" sizes="(min-width: 1240px) 540px, 100vw" width="1000" height="824" alt="Foto de muestra: mirada de una mujer de ojos claros con el rostro parcialmente cubierto por una tela blanca" loading="lazy" decoding="async" style="object-position: center 35%;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEGURIDAD -->
+  <section id="seguridad" style="background: #1C3530; color: #E9EFEC;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 112px 40px; display: flex; flex-direction: column; gap: 56px;">
+      <div data-reveal style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px;">
+        <div style="display: flex; flex-direction: column; gap: 16px; max-width: 660px;">
+          <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #D2B08C;">Tu seguridad, lo primero</span>
+          <h2 style="color: #FFFFFF;">Un proceso riguroso en cada intervención</h2>
+        </div>
+        <p style="font-size: 17px; line-height: 1.7; color: #BFCFC8; max-width: 420px;">Cada cirugía se planifica de forma individual y se realiza en [nombre del centro quirúrgico], con todas las garantías.</p>
+      </div>
+      <div data-stagger style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: #33504A; border: 1px solid #33504A; border-radius: 12px; overflow: hidden;">
+        <div style="background: #1C3530; padding: 40px 36px; display: flex; flex-direction: column; gap: 14px;">
+          <span style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 700; font-size: 32px; color: #D2B08C; line-height: 1;">I</span>
+          <h3 style="color: #FFFFFF;">Diagnóstico preciso</h3>
+          <p style="font-size: 15px; line-height: 1.7; color: #BFCFC8;">Pruebas completas antes de indicar cualquier cirugía.</p>
+        </div>
+        <div style="background: #1C3530; padding: 40px 36px; display: flex; flex-direction: column; gap: 14px;">
+          <span style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 700; font-size: 32px; color: #D2B08C; line-height: 1;">II</span>
+          <h3 style="color: #FFFFFF;">Información clara</h3>
+          <p style="font-size: 15px; line-height: 1.7; color: #BFCFC8;">Te explico la técnica, los resultados esperables y los riesgos antes de decidir.</p>
+        </div>
+        <div style="background: #1C3530; padding: 40px 36px; display: flex; flex-direction: column; gap: 14px;">
+          <span style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 700; font-size: 32px; color: #D2B08C; line-height: 1;">III</span>
+          <h3 style="color: #FFFFFF;">Seguimiento personal</h3>
+          <p style="font-size: 15px; line-height: 1.7; color: #BFCFC8;">Las revisiones después de la cirugía las hago yo misma.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAYECTORIA -->
+  <section id="sobre-mi" style="background: #FAF6F0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 112px 40px; display: flex; flex-wrap: wrap; align-items: center; gap: 80px;">
+      <div data-reveal class="ph-box" style="flex: 1 1 360px; min-width: 0; max-width: 440px; height: 520px; border-radius: 6px; background: #E3D5C2; overflow: hidden;"><img class="photo" src="../img/p1-trayectoria-880.webp" srcset="../img/p1-trayectoria-480.webp 480w, ../img/p1-trayectoria-880.webp 880w" sizes="(max-width: 480px) 100vw, 440px" width="880" height="1040" alt="Foto de muestra: retrato de la doctora con bata blanca, de gesto cercano y sereno" loading="lazy" decoding="async" style="object-position: center 30%;"></div>
+      <div data-reveal style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 24px;">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #8C5E3C;">Trayectoria</span>
+        <h2 style="color: #1E1B18;">Dra. Katia Sotelo</h2>
+        <p style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 500; font-size: 22px; line-height: 1.5; letter-spacing: -0.01em; color: #24413A;">“Mi compromiso es que cada paciente entienda su diagnóstico y llegue a la cirugía con total confianza.”</p>
+        <dl style="margin: 0; display: flex; flex-direction: column; border-top: 1px solid #E5DBCD;">
+          <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 16px 0; border-bottom: 1px solid #E5DBCD;"><dt style="flex: 0 0 160px; font-size: 14px; font-weight: 600; color: #6E6358;">Formación</dt><dd style="margin: 0; flex: 1 1 260px; font-size: 16px;">[Licenciatura, especialidad MIR y hospital]</dd></div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 16px 0; border-bottom: 1px solid #E5DBCD;"><dt style="flex: 0 0 160px; font-size: 14px; font-weight: 600; color: #6E6358;">Experiencia</dt><dd style="margin: 0; flex: 1 1 260px; font-size: 16px;">[Hospitales y clínicas donde has trabajado]</dd></div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 16px 0; border-bottom: 1px solid #E5DBCD;"><dt style="flex: 0 0 160px; font-size: 14px; font-weight: 600; color: #6E6358;">Sociedades</dt><dd style="margin: 0; flex: 1 1 260px; font-size: 16px;">[Sociedades médicas de las que eres miembro]</dd></div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 16px 0; border-bottom: 1px solid #E5DBCD;"><dt style="flex: 0 0 160px; font-size: 14px; font-weight: 600; color: #6E6358;">Colegiada</dt><dd style="margin: 0; flex: 1 1 260px; font-size: 16px;">Nº [——]</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREGUNTAS -->
+  <section id="preguntas" style="background: #FFFFFF;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 112px 40px; display: flex; flex-wrap: wrap; gap: 72px;">
+      <div data-reveal style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 18px;">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #8C5E3C;">Preguntas frecuentes</span>
+        <h2 style="color: #1E1B18;">Antes de tu cirugía</h2>
+        <p style="font-size: 17px; line-height: 1.7; color: #574D45;">Si tienes cualquier otra duda, la resolvemos en la consulta de valoración.</p>
+      </div>
+      <div data-stagger style="flex: 2 1 560px; min-width: 0; display: flex; flex-direction: column; border-top: 1px solid #E5DBCD;">
+        <div style="padding: 28px 0; border-bottom: 1px solid #E5DBCD; display: flex; flex-direction: column; gap: 10px;"><h3>¿La operación de cataratas duele?</h3><p style="font-size: 16px; line-height: 1.7; color: #574D45;">Se realiza con anestesia local y la mayoría de pacientes solo notan una ligera presión. Es ambulatoria: vuelves a casa el mismo día.</p></div>
+        <div style="padding: 28px 0; border-bottom: 1px solid #E5DBCD; display: flex; flex-direction: column; gap: 10px;"><h3>¿Cuándo es el momento de operarse?</h3><p style="font-size: 16px; line-height: 1.7; color: #574D45;">Cuando la catarata empieza a limitar tu día a día: leer, conducir o ver la televisión. Lo valoramos en consulta.</p></div>
+        <div style="padding: 28px 0; border-bottom: 1px solid #E5DBCD; display: flex; flex-direction: column; gap: 10px;"><h3>¿La cirugía de párpados es solo estética?</h3><p style="font-size: 16px; line-height: 1.7; color: #574D45;">No siempre. Un párpado caído puede reducir el campo de visión. En consulta valoramos si la indicación es funcional, estética o ambas.</p></div>
+        <div style="padding: 28px 0; border-bottom: 1px solid #E5DBCD; display: flex; flex-direction: column; gap: 10px;"><h3>¿Cómo es la recuperación?</h3><p style="font-size: 16px; line-height: 1.7; color: #574D45;">Depende de cada intervención. Antes de la cirugía te explico qué cuidados necesitarás y cuándo serán las revisiones.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PEDIR CITA -->
+  <section id="cita" style="background: #F1E8DC;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 112px 40px; display: flex; flex-wrap: wrap; gap: 72px; align-items: center;">
+      <div data-reveal style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 22px;">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #8C5E3C;">Pedir cita</span>
+        <h2 style="color: #1E1B18;">Reserva tu consulta de valoración</h2>
+        <p style="font-size: 18px; line-height: 1.7; color: #574D45;">Elige día y hora online, en cualquier momento. Recibirás la confirmación por email.</p>
+        <div style="display: flex; flex-direction: column; border-top: 1px solid #D9CBB8; margin-top: 8px;">
+          <div style="display: flex; gap: 16px; align-items: flex-start; padding: 18px 0; border-bottom: 1px solid #D9CBB8;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 1 1 13 0c0 5.4-6.5 11-6.5 11Z" stroke="#8C5E3C" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="#8C5E3C" stroke-width="1.7"/></svg>
+            <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-weight: 700; font-size: 16px;">[Nombre del centro 1]</span><span style="font-size: 15px; color: #6E6358;">[Dirección, población] · <a class="lnk-ci" href="#cita" style="color: #24413A; font-weight: 600;">Cómo llegar</a></span></div>
+          </div>
+          <div style="display: flex; gap: 16px; align-items: flex-start; padding: 18px 0; border-bottom: 1px solid #D9CBB8;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 1 1 13 0c0 5.4-6.5 11-6.5 11Z" stroke="#8C5E3C" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="#8C5E3C" stroke-width="1.7"/></svg>
+            <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-weight: 700; font-size: 16px;">[Nombre del centro 2]</span><span style="font-size: 15px; color: #6E6358;">[Dirección, población] · <a class="lnk-ci" href="#cita" style="color: #24413A; font-weight: 600;">Cómo llegar</a></span></div>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="1" class="widget" style="flex: 1 1 440px; min-width: 0; background: #FFFFFF; border-radius: 12px; padding: 40px; display: flex; flex-direction: column; gap: 22px; box-shadow: 0 24px 50px rgba(42,38,34,0.10); box-sizing: border-box;">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <img class="avatar" src="../img/avatar-p1-128.webp" width="64" height="64" alt="Foto de muestra de la doctora" loading="lazy" decoding="async" style="width: 64px; height: 64px; border-radius: 6px; object-fit: cover; flex: none;">
+          <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 700; font-size: 20px;">Dra. Katia Sotelo</span><span style="font-size: 14px; color: #6E6358;">Oftalmóloga · Cirugía de cataratas y párpados</span></div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; text-align: center;">
+          <div style="border: 1.5px solid #24413A; background: #EEF2EF; border-radius: 8px; padding: 14px 4px; font-size: 14px;"><div style="font-weight: 700;">Lun</div><div style="color: #24413A;">10:00</div></div>
+          <div style="border: 1px solid #E5DBCD; border-radius: 8px; padding: 14px 4px; font-size: 14px;"><div style="font-weight: 700;">Mar</div><div style="color: #6E6358;">16:30</div></div>
+          <div style="border: 1px solid #E5DBCD; border-radius: 8px; padding: 14px 4px; font-size: 14px;"><div style="font-weight: 700;">Jue</div><div style="color: #6E6358;">09:15</div></div>
+          <div style="border: 1px solid #E5DBCD; border-radius: 8px; padding: 14px 4px; font-size: 14px;"><div style="font-weight: 700;">Vie</div><div style="color: #6E6358;">12:00</div></div>
+        </div>
+        <a class="btn1" href="#cita" style="display: inline-flex; justify-content: center; align-items: center; background: #24413A; color: #FFFFFF; text-decoration: none; padding: 18px 24px; border-radius: 6px; font-weight: 600; font-size: 16px; min-height: 56px; box-sizing: border-box;">Ver horas disponibles</a>
+        <p style="font-size: 13px; color: #6E6358; text-align: center;">Ejemplo: aquí irá tu calendario real de Doctoralia</p>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- PIE -->
+  <footer style="background: #1C3530; color: #BFCFC8;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 64px 40px 40px; display: flex; flex-direction: column; gap: 40px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
+        <div style="display: flex; flex-direction: column; gap: 10px; max-width: 340px;">
+          <span style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 700; font-size: 22px; color: #FFFFFF;">Dra. Katia Sotelo</span>
+          <span style="font-size: 15px; line-height: 1.6;">Oftalmóloga especializada en cirugía de cataratas y de párpados.</span>
+        </div>
+        <nav aria-label="Páginas" style="display: flex; flex-direction: column; gap: 10px; font-size: 15px;">
+          <span style="color: #FFFFFF; font-weight: 600;">La web</span>
+          <a href="#cirugias" style="color: #BFCFC8; text-decoration: none;">Cirugías</a>
+          <a href="#sobre-mi" style="color: #BFCFC8; text-decoration: none;">Trayectoria</a>
+          <a href="#preguntas" style="color: #BFCFC8; text-decoration: none;">Preguntas frecuentes</a>
+          <a href="#cita" style="color: #BFCFC8; text-decoration: none;">Pedir cita</a>
+        </nav>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px;">
+          <span style="color: #FFFFFF; font-weight: 600;">Contacto</span>
+          <span>WhatsApp: [teléfono]</span>
+          <span>[email]</span>
+        </div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding-top: 24px; border-top: 1px solid #33504A; font-size: 14px;">
+        <span>Nº de colegiada [——] · Nº de registro sanitario [——]</span>
+        <nav aria-label="Enlaces legales" style="display: flex; flex-wrap: wrap; gap: 22px;">
+          <a href="#inicio" style="color: #BFCFC8;">Aviso legal</a>
+          <a href="#inicio" style="color: #BFCFC8;">Privacidad</a>
+          <a href="#inicio" style="color: #BFCFC8;">Cookies</a>
+        </nav>
+      </div>
+      <a class="wa-float" href="https://wa.me/" aria-label="Escribir por WhatsApp" style="position: fixed; right: 28px; bottom: 28px; width: 60px; height: 60px; border-radius: 999px; background: #24413A; display: flex; align-items: center; justify-content: center; box-shadow: 0 14px 30px rgba(28,53,48,0.3); z-index: 10;">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20Z" stroke="#FFFFFF" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.2 8.8c.3 2.6 2.4 4.7 5 5l1-1.2-1.6-.9-.8.7c-.9-.4-1.8-1.3-2.2-2.2l.7-.8-.9-1.6-1.2 1Z" fill="#FFFFFF"/></svg>
+  </a>
+    </div>
+  </footer>
+
+
+</div>
+<script>
+(function(){
+  var d=document,b=d.querySelector('.nav-toggle'),n=d.getElementById('site-nav');
+  if(!b||!n)return;
+  function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',String(o))}
+  b.addEventListener('click',function(){set(b.getAttribute('aria-expanded')!=='true')});
+  n.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});
+  d.addEventListener('keydown',function(e){if(e.key==='Escape'&&b.getAttribute('aria-expanded')==='true'){set(false);b.focus()}});
+})();
+</script>
+</body>
+</html>

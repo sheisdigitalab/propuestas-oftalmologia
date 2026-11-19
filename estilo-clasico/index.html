@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<script>(function(){var h=document.documentElement;h.classList.add("js");setTimeout(function(){if(!h.classList.contains("anim"))h.classList.add("no-anim")},2500)})()</script>
+<script src="../js/animaciones.js" defer></script>
+<title>Propuesta web · Estilo clásico · Dra. Katia Sotelo</title>
+<meta name="description" content="Propuesta de diseño para la web de la Dra. Katia Sotelo. Las fotos y los datos entre corchetes son de ejemplo.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Propuesta web · Estilo clásico">
+<meta property="og:description" content="Propuesta de diseño para la web de la Dra. Katia Sotelo. Las fotos y los datos entre corchetes son de ejemplo.">
+<meta property="og:url" content="https://sheisdigitalab.github.io/propuestas-oftalmologia/estilo-clasico/">
+<meta property="og:image" content="https://sheisdigitalab.github.io/propuestas-oftalmologia/img/og-estilo-clasico.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Portada de la propuesta web Estilo clásico para la Dra. Katia Sotelo">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+@font-face{font-family:Merriweather;font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/merriweather-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:Merriweather;font-style:normal;font-weight:700;font-display:swap;src:url('../fonts/merriweather-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/source-sans-3-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/source-sans-3-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:700;font-display:swap;src:url('../fonts/source-sans-3-latin-700-normal.woff2') format('woff2')}
+
+:root{
+  --navy:#1E3A5F; --navy-2:#132842; --blue:#2A6FB0; --blue-dark:#215A91;
+  --light:#F2F5F8; --line:#DCE4EC; --text:#1C2733; --muted:#4A5868; --white:#FFFFFF;
+  --serif:Merriweather,Georgia,serif; --sans:'Source Sans 3',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-padding-bottom:96px;scroll-padding-top:84px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--white);color:var(--text);font-family:var(--sans);font-size:18px;line-height:1.6}
+h1,h2,h3,p{margin:0}
+a{color:var(--blue-dark)} a:hover{color:var(--navy)}
+img{max-width:100%}
+main:focus{outline:none}
+.photo{display:block;width:100%;height:100%;object-fit:cover}
+.ph.has-img{padding:0;overflow:hidden}
+.skip{position:absolute;left:16px;top:-100px;z-index:100;background:var(--navy);color:var(--white);padding:14px 22px;border-radius:4px;font-weight:700;font-size:17px;text-decoration:none}
+.skip:focus{top:16px;color:var(--white)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--navy);outline-offset:3px;box-shadow:0 0 0 3px #FFFFFF}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:var(--serif);color:var(--navy);font-weight:700}
+h1{font-size:clamp(34px,4.2vw,52px);line-height:1.2}
+h2{font-size:clamp(28px,3.2vw,40px);line-height:1.25}
+h3{font-size:22px;line-height:1.3}
+.kicker{font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue-dark)}
+.lead{font-size:20px;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:12px 30px;text-align:center;border-radius:4px;font-weight:700;font-size:17px;text-decoration:none;background:var(--blue);color:var(--white);border:2px solid var(--blue)}
+.btn:hover{background:var(--blue-dark);border-color:var(--blue-dark);color:var(--white)}
+.btn-outline{background:var(--white);color:var(--navy);border-color:var(--navy)}
+.btn-outline:hover{background:var(--light);color:var(--navy)}
+.ph{background:#D5DFEA;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;font-size:15px;text-align:center;padding:20px}
+section{padding:96px 0}
+.section-head{display:flex;flex-direction:column;gap:12px;max-width:720px;margin-bottom:48px}
+.icon{width:56px;height:56px;border-radius:999px;background:#E3EDF7;display:flex;align-items:center;justify-content:center;flex:none}
+
+/* Barra superior y cabecera */
+.topbar{background:var(--navy);color:#DCE6F2;font-size:16px}
+.topbar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding-top:10px;padding-bottom:10px}
+.topbar a{color:var(--white);font-weight:700;text-decoration:none;display:inline-flex;align-items:center;min-height:44px;margin:-10px 0}
+header.site{border-bottom:1px solid var(--line);background:var(--white);position:sticky;top:0;z-index:50}
+html.is-scrolled header.site{box-shadow:0 4px 18px rgba(30,58,95,.12)}
+html.is-scrolled header.site .wrap{padding-top:10px;padding-bottom:10px}
+header.site .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:20px;padding-bottom:20px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.brand-mark{width:48px;height:48px;border-radius:999px;background:var(--navy);display:flex;align-items:center;justify-content:center;flex:none}
+.brand-name{font-family:var(--serif);font-weight:700;font-size:21px;color:var(--navy);display:block}
+.brand-sub{font-size:15px;color:var(--muted);display:block}
+nav.menu{display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-weight:600;font-size:17px}
+nav.menu a{color:var(--text);text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
+.nav-toggle{display:none;align-items:center;gap:10px;min-height:48px;padding:0 18px;background:var(--white);color:var(--navy);border:2px solid var(--navy);border-radius:4px;font:700 17px/1 var(--sans);cursor:pointer}
+nav.menu .btn{color:var(--white);min-height:48px;padding:0 22px}
+
+/* Hero */
+.hero{background:var(--light);padding:72px 0}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:center}
+.hero-text{display:flex;flex-direction:column;gap:24px}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+.trust{display:flex;flex-wrap:wrap;gap:12px 32px;font-weight:700;color:var(--navy);font-size:17px;margin-top:8px}
+.trust span{display:inline-flex;align-items:center;gap:8px}
+.hero .ph{height:520px;border-radius:6px;border:8px solid var(--white);box-shadow:0 16px 40px rgba(30,58,95,.15)}
+
+/* Especialidades */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.card{border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;background:var(--white)}
+.card .ph{height:260px}
+.card-body{padding:32px;display:flex;flex-direction:column;gap:16px;flex:1}
+.card ul{margin:0;padding-left:22px;color:var(--muted)}
+.card li{margin:4px 0}
+.more{font-weight:700;text-decoration:none;margin-top:auto;min-height:44px;display:inline-flex;align-items:center}
+
+/* Por qué */
+.why{background:var(--navy);color:#DCE6F2}
+.why h2,.why h3{color:var(--white)}
+.why .kicker{color:#9EC3E8}
+.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.why-item{display:flex;flex-direction:column;gap:12px}
+.why .icon{background:#2C4C75}
+
+/* Doctora */
+.doctor .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px;align-items:center}
+.doctor .ph{height:480px;border-radius:6px}
+.doctor-text{display:flex;flex-direction:column;gap:20px}
+.facts{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.facts li{display:flex;flex-wrap:wrap;gap:4px 24px;padding:14px 0;border-bottom:1px solid var(--line)}
+.facts strong{flex:0 0 150px;color:var(--navy)}
+
+/* Consulta */
+.services{background:var(--light)}
+.service-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.service{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:28px;display:flex;flex-direction:column;gap:12px}
+.service p{color:var(--muted);font-size:17px}
+
+/* Preguntas */
+.faq-list{border-top:1px solid var(--line);max-width:860px}
+.faq-item{padding:24px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
+.faq-item p{color:var(--muted)}
+
+/* Cita */
+.booking{background:var(--light)}
+.booking .wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px;align-items:start}
+.centres{display:flex;flex-direction:column;gap:16px;margin-top:8px}
+.centre{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:20px 24px;display:flex;gap:16px}
+.widget{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:32px;display:flex;flex-direction:column;gap:20px;box-shadow:0 12px 30px rgba(30,58,95,.08)}
+.who{display:flex;align-items:center;gap:16px}
+.avatar{width:64px;height:64px;border-radius:999px;background:#D5DFEA;flex:none}
+.days{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;text-align:center;font-size:16px}
+.days div{border:1px solid var(--line);border-radius:4px;padding:12px 4px}
+.days .on{border:2px solid var(--blue);background:#E3EDF7}
+.widget small{text-align:center;color:var(--muted);font-size:15px}
+.call{display:flex;align-items:center;gap:14px;padding:18px 20px;border-radius:6px;background:var(--navy);color:var(--white);text-decoration:none;font-weight:700}
+.call:hover{background:var(--navy-2);color:var(--white)}
+
+/* Pie */
+footer{background:var(--navy-2);color:#C3D2E3;font-size:16px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px;padding-top:56px;padding-bottom:40px}
+footer h2{font-size:20px;color:var(--white)}
+footer a{color:#C3D2E3}
+.foot-col{display:flex;flex-direction:column;gap:8px}
+.legal{border-top:1px solid #2C4C75;width:100%;padding-top:20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;font-size:15px}
+.legal nav{display:flex;flex-wrap:wrap;gap:0 20px}
+.legal nav a{display:inline-flex;align-items:center;min-height:44px}
+
+@media (max-width:960px){
+  .hero .wrap,.doctor .wrap,.booking .wrap{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero .ph,.doctor .ph{height:380px}
+  .nav-toggle{display:inline-flex}
+  nav.menu.open{max-height:calc(100vh - 130px);overflow-y:auto}
+  nav.menu{flex:1 1 100%;flex-direction:column;align-items:stretch;gap:0}
+  html.js nav.menu:not(.open){display:none}
+  nav.menu a{border-top:1px solid var(--line);min-height:48px}
+  nav.menu a.btn{border-top:2px solid var(--blue);margin:12px 0 4px;justify-content:center}
+}
+@media (max-width:600px){
+  .wrap{padding:0 20px}
+  section{padding:64px 0}
+  .service-grid{grid-template-columns:1fr}
+  .hero .ph,.doctor .ph{height:300px}
+  .widget{padding:20px}
+}
+
+/* Aviso */
+.aviso{background:#E3EDF7;color:var(--navy);font:600 14px/20px var(--sans);text-align:center;padding:8px 16px}
+.hdr-cta{display:none}
+.nav-toggle{min-width:44px;justify-content:center}
+@media (max-width:960px){
+  .hdr-cta{display:inline-flex;min-height:44px;padding:0 18px;font-size:16px}
+  nav.menu a.btn{display:none}
+  header.site .wrap{gap:10px;padding-top:12px;padding-bottom:12px}
+  .brand{flex:1 1 auto;min-width:0;min-height:44px}
+  nav.menu a{font-size:17px}
+  .kicker,.widget small,.legal,.brand-sub{font-size:16px}
+  .centre a{display:inline-flex;align-items:center;min-height:44px}
+}
+@media (max-width:600px){
+  .topbar{display:none}
+  .actions{flex-direction:column;align-items:stretch}
+  .actions .btn{width:100%}
+  .card .ph{height:220px}
+  .card-body{padding:24px}
+  .why-item p,.faq-item p{font-size:17px}
+  h1,h2,h3{overflow-wrap:break-word}
+}
+@media (max-width:560px){
+  .brand-sub{display:none}
+  .nav-toggle .lbl{display:none}
+  .nav-toggle{width:48px;padding:0}
+}
+@media (max-width:420px){
+  .brand-mark{display:none}
+  .brand-name{font-family:var(--sans);font-size:18px;letter-spacing:0}
+  .hdr-cta{padding:0 14px}
+}
+
+/* Movimiento contenido (solo si el usuario no pide reducirlo). Estados ocultos solo con .js */
+.btn:hover,.btn:focus-visible{background:var(--blue-dark);border-color:var(--blue-dark);color:var(--white)}
+.btn-outline:hover,.btn-outline:focus-visible{background:var(--light);color:var(--navy);border-color:var(--navy)}
+.more:hover .arr,.more:focus-visible .arr{transform:translateX(4px)}
+.arr{display:inline-block;margin-left:.3em}
+@media (prefers-reduced-motion:no-preference){
+  :root{--ease:cubic-bezier(.22,.61,.36,1)}
+  header.site,header.site .wrap{transition:box-shadow .35s var(--ease),padding .35s var(--ease)}
+  .btn,.call{transition:background-color .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease),transform .25s var(--ease),box-shadow .25s var(--ease)}
+  .btn:hover,.btn:focus-visible,.call:hover,.call:focus-visible{transform:translateY(-2px)}
+  .btn:hover,.call:hover{box-shadow:0 8px 20px rgba(30,58,95,.22)}
+  .arr{transition:transform .25s var(--ease)}
+  .card,.service{transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+  .card:hover,.card:focus-within,.service:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(30,58,95,.14)}
+  .card .ph img{transition:transform .8s var(--ease)}
+  .card:hover .ph img,.card:focus-within .ph img{transform:scale(1.04)}
+
+  html.js:not(.no-anim) [data-reveal],html.js:not(.no-anim) [data-stagger]>*{opacity:0;transform:translateY(24px);transition:opacity .55s var(--ease) var(--d,0ms),transform .55s var(--ease) var(--d,0ms)}
+  html.js:not(.no-anim) [data-reveal].is-in,html.js:not(.no-anim) [data-stagger]>.is-in{opacity:1;transform:none}
+  html.js:not(.no-anim) [data-reveal="zoom"]{transform:none;transition:opacity .8s var(--ease) var(--d,0ms)}
+  @media (max-width:760px){
+    html.js:not(.no-anim) [data-reveal],html.js:not(.no-anim) [data-stagger]>*{transform:translateY(16px);transition-duration:.45s}
+    html.js:not(.no-anim) [data-reveal="zoom"]{transform:none}
+    html.js:not(.no-anim) [data-reveal="zoom"] img{transition-duration:.8s}
+  }
+  html.js:not(.no-anim) [data-reveal="zoom"] img{transform:scale(1.05);transition:transform 1.2s var(--ease) var(--d,0ms)}
+  html.js:not(.no-anim) [data-reveal="zoom"].is-in img{transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<div class="aviso">Propuesta de diseño · Las fotos y los datos entre corchetes son de ejemplo</div>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Consulta de oftalmología · [Centros donde visitas]</span>
+    <a href="tel:+34000000000">Tel. / WhatsApp [teléfono]</a>
+  </div>
+</div>
+
+<header data-header class="site">
+  <div class="wrap">
+    <a class="brand" href="#inicio">
+      <span class="brand-mark" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M2.5 12c2.2-4 5.4-6 9.5-6s7.3 2 9.5 6c-2.2 4-5.4 6-9.5 6s-7.3-2-9.5-6Z" stroke="#FFFFFF" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" stroke="#FFFFFF" stroke-width="1.6"/></svg></span>
+      <span><span class="brand-name">Dra. Katia Sotelo</span><span class="brand-sub">Médica oftalmóloga · Colegiada nº [——]</span></span>
+    </a>
+    <a class="btn hdr-cta" href="#cita">Pedir cita</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menú"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="lbl">Menú</span></button>
+    <nav class="menu" id="site-nav" aria-label="Menú principal">
+      <a href="#cirugias">Cirugías</a>
+      <a href="#consulta">Consulta</a>
+      <a href="#doctora">Sobre mí</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="btn" href="#cita">Pedir cita</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido" tabindex="-1">
+  <section class="hero" id="inicio">
+    <div class="wrap">
+      <div class="hero-text">
+        <span data-reveal="1" class="kicker">Oftalmología · Cirugía de cataratas y párpados</span>
+        <h1 data-reveal="2">Especialista en cirugía de cataratas y párpados</h1>
+        <p data-reveal="3" class="lead">Atención oftalmológica completa: revisión, diagnóstico, cirugía y seguimiento, con la tranquilidad de estar en buenas manos.</p>
+        <div data-reveal="4" class="actions">
+          <a class="btn" href="#cita">Pedir cita online</a>
+          <a class="btn btn-outline" href="tel:+34000000000">Llamar a la consulta</a>
+        </div>
+        <div data-reveal="5" class="trust">
+          <span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3Z" stroke="#215A91" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 12l2.4 2.4L15.5 9.8" stroke="#215A91" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Seguridad y rigor</span>
+          <span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.5" stroke="#215A91" stroke-width="1.8"/><path d="M12 7.5V12l3 2" stroke="#215A91" stroke-width="1.8" stroke-linecap="round"/></svg>Cita online 24 h</span>
+          <span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="#215A91" stroke-width="1.8"/><path d="M5 20c1.2-3.5 3.8-5.5 7-5.5s5.8 2 7 5.5" stroke="#215A91" stroke-width="1.8" stroke-linecap="round"/></svg>Trato personal</span>
+        </div>
+      </div>
+      <div data-reveal="zoom" data-delay="150" class="ph has-img"><img class="photo" src="../img/p3-hero-960.webp" srcset="../img/p3-hero-480.webp 480w, ../img/p3-hero-960.webp 960w" sizes="(max-width: 960px) 100vw, 486px" width="960" height="1027" alt="Foto de muestra: la doctora con bata blanca, sonriendo a cámara con vegetación luminosa de fondo" fetchpriority="high" style="object-position:center 20%"></div>
+    </div>
+  </section>
+
+  <section id="cirugias">
+    <div class="wrap">
+      <div data-reveal class="section-head">
+        <span class="kicker">Cirugías</span>
+        <h2>Mis especialidades quirúrgicas</h2>
+        <p class="lead">Antes de cualquier intervención le explico en qué consiste, qué resultados esperar y cómo será la recuperación.</p>
+      </div>
+      <div data-stagger class="cards">
+        <article class="card">
+          <div class="ph has-img"><img class="photo" src="../img/p3-cataratas-1100.webp" srcset="../img/p3-cataratas-600.webp 600w, ../img/p3-cataratas-1100.webp 1100w" sizes="(max-width: 960px) 100vw, 552px" width="1100" height="518" alt="Foto de muestra: primer plano de un ojo azul, sereno y natural" loading="lazy" decoding="async" style="object-position:center"></div>
+          <div class="card-body">
+            <h3>Cirugía de cataratas</h3>
+            <p>Si ve borroso, con colores apagados o le deslumbran las luces, puede tener cataratas. La operación sustituye el cristalino opaco por una lente intraocular. Es ambulatoria.</p>
+            <ul><li>Estudio preoperatorio completo</li><li>Lente adaptada a su vista</li><li>Revisiones después de la cirugía</li></ul>
+            <a class="more" href="#cirugias">Más información sobre cataratas <span class="arr" aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="ph has-img"><img class="photo" src="../img/p3-parpados-1100.webp" srcset="../img/p3-parpados-600.webp 600w, ../img/p3-parpados-1100.webp 1100w" sizes="(max-width: 960px) 100vw, 552px" width="1100" height="518" alt="Foto de muestra: primer plano de un ojo azul grisáceo con pestañas largas y el párpado relajado" loading="lazy" decoding="async" style="object-position:center"></div>
+          <div class="card-body">
+            <h3>Cirugía de párpados</h3>
+            <p>El párpado caído, el exceso de piel o las lesiones del párpado pueden reducir la visión y resultar molestos. Valoro cada caso para indicar el tratamiento adecuado.</p>
+            <ul><li>Blefaroplastia</li><li>Ptosis palpebral (párpado caído)</li><li>Chalazión y lesiones del párpado</li></ul>
+            <a class="more" href="#cirugias">Más información sobre párpados <span class="arr" aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="why" aria-labelledby="por-que">
+    <div class="wrap">
+      <div data-reveal class="section-head">
+        <span class="kicker">Por qué confiar</span>
+        <h2 id="por-que">Su vista, en buenas manos</h2>
+      </div>
+      <div data-stagger class="why-grid">
+        <div class="why-item"><span class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M2.5 12c2.2-4 5.4-6 9.5-6s7.3 2 9.5 6c-2.2 4-5.4 6-9.5 6s-7.3-2-9.5-6Z" stroke="#FFFFFF" stroke-width="1.7"/><circle cx="12" cy="12" r="3" stroke="#FFFFFF" stroke-width="1.7"/></svg></span><h3>Diagnóstico completo</h3><p>Pruebas necesarias antes de indicar cualquier tratamiento o cirugía.</p></div>
+        <div class="why-item"><span class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M5 6.5h14M5 12h14M5 17.5h9" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round"/></svg></span><h3>Información clara</h3><p>Le explico la técnica, los resultados y los riesgos, sin prisas y con palabras sencillas.</p></div>
+        <div class="why-item"><span class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.5" r="3.5" stroke="#FFFFFF" stroke-width="1.7"/><path d="M5 20c1.2-3.5 3.8-5.5 7-5.5s5.8 2 7 5.5" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round"/></svg></span><h3>Seguimiento personal</h3><p>Le atiendo yo misma en las revisiones hasta su recuperación completa.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="doctor" id="doctora">
+    <div class="wrap">
+      <div data-reveal="zoom" class="ph has-img"><img class="photo" src="../img/p3-doctora-860.webp" srcset="../img/p3-doctora-480.webp 480w, ../img/p3-doctora-860.webp 860w" sizes="(max-width: 960px) 100vw, 429px" width="860" height="962" alt="Foto de muestra: retrato de la doctora con bata blanca, de gesto cercano y sereno" loading="lazy" decoding="async" style="object-position:center 25%"></div>
+      <div data-reveal class="doctor-text">
+        <span class="kicker">Sobre mí</span>
+        <h2>Dra. Katia Sotelo</h2>
+        <p class="lead">Médica oftalmóloga especializada en cirugía de cataratas y de párpados. [Aquí irá un resumen de su formación y experiencia.]</p>
+        <ul class="facts">
+          <li><strong>Formación</strong><span>[Licenciatura, especialidad MIR y hospital]</span></li>
+          <li><strong>Experiencia</strong><span>[Hospitales y clínicas]</span></li>
+          <li><strong>Sociedades</strong><span>[Sociedades médicas]</span></li>
+          <li><strong>Colegiada</strong><span>Nº [——]</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="consulta">
+    <div class="wrap">
+      <div data-reveal class="section-head">
+        <span class="kicker">Consulta</span>
+        <h2>Revisión oftalmológica completa</h2>
+      </div>
+      <div data-stagger class="service-grid">
+        <div class="service"><span class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M2.5 12c2.2-4 5.4-6 9.5-6s7.3 2 9.5 6c-2.2 4-5.4 6-9.5 6s-7.3-2-9.5-6Z" stroke="#215A91" stroke-width="1.7"/><circle cx="12" cy="12" r="3" stroke="#215A91" stroke-width="1.7"/></svg></span><h3>Graduación de la vista</h3><p>De lejos y de cerca.</p></div>
+        <div class="service"><span class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="#215A91" stroke-width="1.7"/><path d="M12 7.5V12l3 2" stroke="#215A91" stroke-width="1.7" stroke-linecap="round"/></svg></span><h3>Presión ocular</h3><p>Prevención y control del glaucoma.</p></div>
+        <div class="service"><span class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="#215A91" stroke-width="1.7"/><circle cx="12" cy="12" r="3.5" stroke="#215A91" stroke-width="1.7"/></svg></span><h3>Fondo de ojo</h3><p>Revisión de la retina y el nervio óptico.</p></div>
+        <div class="service"><span class="icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 18c3-1 5-3.5 8-3.5s5 2.5 8 3.5M5 10c2.2-2.6 4.5-4 7-4s4.8 1.4 7 4" stroke="#215A91" stroke-width="1.7" stroke-linecap="round"/></svg></span><h3>Párpados y ojo seco</h3><p>Valoración de párpados y superficie ocular.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="preguntas">
+    <div class="wrap">
+      <div data-reveal class="section-head">
+        <span class="kicker">Preguntas frecuentes</span>
+        <h2>Resolvemos sus dudas</h2>
+      </div>
+      <div data-stagger class="faq-list">
+        <div class="faq-item"><h3>¿La operación de cataratas duele?</h3><p>Se realiza con anestesia local y la mayoría de pacientes solo notan una ligera presión. Es ambulatoria: vuelve a casa el mismo día.</p></div>
+        <div class="faq-item"><h3>¿Cuándo debo operarme?</h3><p>Cuando la catarata empieza a limitar su día a día: leer, conducir o ver la televisión. Lo valoramos en consulta.</p></div>
+        <div class="faq-item"><h3>¿La cirugía de párpados es solo estética?</h3><p>No siempre. Un párpado caído puede reducir el campo de visión. En consulta valoramos si es funcional, estética o ambas.</p></div>
+        <div class="faq-item"><h3>¿Cómo pido cita?</h3><p>Online desde esta web, a cualquier hora, o llamando a la consulta.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking" id="cita">
+    <div class="wrap">
+      <div data-reveal style="display:flex;flex-direction:column;gap:20px">
+        <span class="kicker">Pedir cita</span>
+        <h2>Reserve su cita</h2>
+        <p class="lead">Elija día y hora online. Si lo prefiere, llámenos y le atendemos personalmente.</p>
+        <a class="call" href="tel:+34000000000"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3.5h3l1.5 4-2 1.3a11 11 0 0 0 6.1 6.1l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z" stroke="#FFFFFF" stroke-width="1.7" stroke-linejoin="round"/></svg>Llamar: [teléfono]</a>
+        <div class="centres">
+          <div class="centre"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex:none"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 1 1 13 0c0 5.4-6.5 11-6.5 11Z" stroke="#215A91" stroke-width="1.7"/><circle cx="12" cy="10" r="2.4" stroke="#215A91" stroke-width="1.7"/></svg><div><strong>[Nombre del centro 1]</strong><br><span style="color:var(--muted)">[Dirección, población]</span> · <a href="#cita">Cómo llegar</a></div></div>
+          <div class="centre"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex:none"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 1 1 13 0c0 5.4-6.5 11-6.5 11Z" stroke="#215A91" stroke-width="1.7"/><circle cx="12" cy="10" r="2.4" stroke="#215A91" stroke-width="1.7"/></svg><div><strong>[Nombre del centro 2]</strong><br><span style="color:var(--muted)">[Dirección, población]</span> · <a href="#cita">Cómo llegar</a></div></div>
+        </div>
+      </div>
+      <div data-reveal="1" class="widget">
+        <div class="who"><img class="avatar" src="../img/avatar-p3-128.webp" width="64" height="64" alt="Foto de muestra de la doctora" loading="lazy" decoding="async" style="object-fit:cover"><div><div style="font-family:var(--serif);font-weight:700;font-size:20px;color:var(--navy)">Dra. Katia Sotelo</div><div style="color:var(--muted);font-size:16px">Oftalmóloga</div></div></div>
+        <div class="days"><div class="on"><b>Lun</b><br>10:00</div><div><b>Mar</b><br>16:30</div><div><b>Jue</b><br>09:15</div><div><b>Vie</b><br>12:00</div></div>
+        <a class="btn" href="#cita">Ver horas disponibles</a>
+        <small>Ejemplo: aquí irá el calendario real de Doctoralia</small>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-col" style="max-width:340px"><h2>Dra. Katia Sotelo</h2><span>Médica oftalmóloga especializada en cirugía de cataratas y de párpados.</span></div>
+    <div class="foot-col"><h2>Contacto</h2><span>Tel. / WhatsApp: [teléfono]</span><span>[email]</span></div>
+    <div class="legal">
+      <span>Nº de colegiada [——] · Nº de registro sanitario [——]</span>
+      <nav aria-label="Enlaces legales"><a href="#inicio">Aviso legal</a><a href="#inicio">Privacidad</a><a href="#inicio">Cookies</a></nav>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  var d=document,b=d.querySelector('.nav-toggle'),n=d.getElementById('site-nav');
+  if(!b||!n)return;
+  function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',String(o))}
+  b.addEventListener('click',function(){set(b.getAttribute('aria-expanded')!=='true')});
+  n.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});
+  d.addEventListener('keydown',function(e){if(e.key==='Escape'&&b.getAttribute('aria-expanded')==='true'){set(false);b.focus()}});
+})();
+</script>
+</body>
+</html>
