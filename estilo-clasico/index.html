@@ -7,11 +7,11 @@
 <script>(function(){var h=document.documentElement;h.classList.add("js");setTimeout(function(){if(!h.classList.contains("anim"))h.classList.add("no-anim")},2500)})()</script>
 <script src="../js/animaciones.js" defer></script>
 <title>Propuesta web · Estilo clásico · Dra. Katia Sotelo</title>
-<meta name="description" content="Propuesta de diseño para la web de la Dra. Katia Sotelo. Las fotos y los datos entre corchetes son de ejemplo.">
+<meta name="description" content="Propuesta de diseño para la web de la Dra. Katia Sotelo. Las fotos y los datos son de ejemplo.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
 <meta property="og:title" content="Propuesta web · Estilo clásico">
-<meta property="og:description" content="Propuesta de diseño para la web de la Dra. Katia Sotelo. Las fotos y los datos entre corchetes son de ejemplo.">
+<meta property="og:description" content="Propuesta de diseño para la web de la Dra. Katia Sotelo. Las fotos y los datos son de ejemplo.">
 <meta property="og:url" content="https://sheisdigitalab.github.io/propuestas-oftalmologia/estilo-clasico/">
 <meta property="og:image" content="https://sheisdigitalab.github.io/propuestas-oftalmologia/img/og-estilo-clasico.jpg">
 <meta property="og:image:type" content="image/jpeg">
@@ -201,6 +201,20 @@ footer a{color:#C3D2E3}
   .hdr-cta{padding:0 14px}
 }
 
+/* Barra inferior y rejilla de días en móvil */
+.mbar{display:none}
+@media (max-width:600px){
+  .days{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .days div{padding:18px 8px;font-size:18px}
+}
+@media (max-width:760px){
+  body{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#FFFFFF;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(30,58,95,.12)}
+  .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:4px;font:700 17px var(--sans);text-decoration:none}
+  .mbar .m-cita{background:var(--blue);color:#FFFFFF;border:2px solid var(--blue)}
+  .mbar .m-call{background:#FFFFFF;color:var(--navy);border:2px solid var(--navy)}
+}
+
 /* Movimiento contenido (solo si el usuario no pide reducirlo). Estados ocultos solo con .js */
 .btn:hover,.btn:focus-visible{background:var(--blue-dark);border-color:var(--blue-dark);color:var(--white)}
 .btn-outline:hover,.btn-outline:focus-visible{background:var(--light);color:var(--navy);border-color:var(--navy)}
@@ -233,12 +247,12 @@ footer a{color:#C3D2E3}
 </head>
 <body>
 <a class="skip" href="#contenido">Saltar al contenido</a>
-<div class="aviso">Propuesta de diseño · Las fotos y los datos entre corchetes son de ejemplo</div>
+<div class="aviso">Propuesta de diseño · Las fotos y los datos son de ejemplo</div>
 
 <div class="topbar">
   <div class="wrap">
-    <span>Consulta de oftalmología · [Centros donde visitas]</span>
-    <a href="tel:+34000000000">Tel. / WhatsApp [teléfono]</a>
+    <span>Consulta de oftalmología · Barcelona y Sant Cugat del Vallès</span>
+    <a href="tel:+34600000000">Tel. / WhatsApp 600 000 000</a>
   </div>
 </div>
 
@@ -246,7 +260,7 @@ footer a{color:#C3D2E3}
   <div class="wrap">
     <a class="brand" href="#inicio">
       <span class="brand-mark" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M2.5 12c2.2-4 5.4-6 9.5-6s7.3 2 9.5 6c-2.2 4-5.4 6-9.5 6s-7.3-2-9.5-6Z" stroke="#FFFFFF" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" stroke="#FFFFFF" stroke-width="1.6"/></svg></span>
-      <span><span class="brand-name">Dra. Katia Sotelo</span><span class="brand-sub">Médica oftalmóloga · Colegiada nº [——]</span></span>
+      <span><span class="brand-name">Dra. Katia Sotelo</span><span class="brand-sub">Médica oftalmóloga · Colegiada nº 08/00000</span></span>
     </a>
     <a class="btn hdr-cta" href="#cita">Pedir cita</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menú"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="lbl">Menú</span></button>
@@ -269,7 +283,7 @@ footer a{color:#C3D2E3}
         <p data-reveal="3" class="lead">Atención oftalmológica completa: revisión, diagnóstico, cirugía y seguimiento, con la tranquilidad de estar en buenas manos.</p>
         <div data-reveal="4" class="actions">
           <a class="btn" href="#cita">Pedir cita online</a>
-          <a class="btn btn-outline" href="tel:+34000000000">Llamar a la consulta</a>
+          <a class="btn btn-outline" href="tel:+34600000000">Llamar a la consulta</a>
         </div>
         <div data-reveal="5" class="trust">
           <span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3Z" stroke="#215A91" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 12l2.4 2.4L15.5 9.8" stroke="#215A91" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Seguridad y rigor</span>
@@ -277,7 +291,7 @@ footer a{color:#C3D2E3}
           <span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="#215A91" stroke-width="1.8"/><path d="M5 20c1.2-3.5 3.8-5.5 7-5.5s5.8 2 7 5.5" stroke="#215A91" stroke-width="1.8" stroke-linecap="round"/></svg>Trato personal</span>
         </div>
       </div>
-      <div data-reveal="zoom" data-delay="150" class="ph has-img"><img class="photo" src="../img/p3-hero-960.webp" srcset="../img/p3-hero-480.webp 480w, ../img/p3-hero-960.webp 960w" sizes="(max-width: 960px) 100vw, 486px" width="960" height="1027" alt="Foto de muestra: la doctora con bata blanca, sonriendo a cámara con vegetación luminosa de fondo" fetchpriority="high" style="object-position:center 20%"></div>
+      <div data-reveal="zoom" data-delay="150" class="ph has-img"><img class="photo" src="../img/p3-hero-960.webp" srcset="../img/p3-hero-480.webp 480w, ../img/p3-hero-960.webp 960w" sizes="(max-width: 960px) 100vw, 486px" width="960" height="1027" alt="Foto de muestra: la doctora examinando a un paciente con una lámpara de hendidura en una consulta luminosa" fetchpriority="high" style="object-position:center 20%"></div>
     </div>
   </section>
 
@@ -290,7 +304,7 @@ footer a{color:#C3D2E3}
       </div>
       <div data-stagger class="cards">
         <article class="card">
-          <div class="ph has-img"><img class="photo" src="../img/p3-cataratas-1100.webp" srcset="../img/p3-cataratas-600.webp 600w, ../img/p3-cataratas-1100.webp 1100w" sizes="(max-width: 960px) 100vw, 552px" width="1100" height="518" alt="Foto de muestra: primer plano de un ojo azul, sereno y natural" loading="lazy" decoding="async" style="object-position:center"></div>
+          <div class="ph has-img"><img class="photo" src="../img/p3-cataratas-1100.webp" srcset="../img/p3-cataratas-600.webp 600w, ../img/p3-cataratas-1100.webp 1100w" sizes="(max-width: 960px) 100vw, 552px" width="1100" height="518" alt="Foto de muestra: hombre mayor durante una exploración de la vista con una montura de pruebas" loading="lazy" decoding="async" style="object-position:center"></div>
           <div class="card-body">
             <h3>Cirugía de cataratas</h3>
             <p>Si ve borroso, con colores apagados o le deslumbran las luces, puede tener cataratas. La operación sustituye el cristalino opaco por una lente intraocular. Es ambulatoria.</p>
@@ -299,7 +313,7 @@ footer a{color:#C3D2E3}
           </div>
         </article>
         <article class="card">
-          <div class="ph has-img"><img class="photo" src="../img/p3-parpados-1100.webp" srcset="../img/p3-parpados-600.webp 600w, ../img/p3-parpados-1100.webp 1100w" sizes="(max-width: 960px) 100vw, 552px" width="1100" height="518" alt="Foto de muestra: primer plano de un ojo azul grisáceo con pestañas largas y el párpado relajado" loading="lazy" decoding="async" style="object-position:center"></div>
+          <div class="ph has-img"><img class="photo" src="../img/p3-parpados-1100.webp" srcset="../img/p3-parpados-600.webp 600w, ../img/p3-parpados-1100.webp 1100w" sizes="(max-width: 960px) 100vw, 552px" width="1100" height="518" alt="Foto de muestra: primer plano de la mirada de una mujer mayor" loading="lazy" decoding="async" style="object-position:center"></div>
           <div class="card-body">
             <h3>Cirugía de párpados</h3>
             <p>El párpado caído, el exceso de piel o las lesiones del párpado pueden reducir la visión y resultar molestos. Valoro cada caso para indicar el tratamiento adecuado.</p>
@@ -327,16 +341,16 @@ footer a{color:#C3D2E3}
 
   <section class="doctor" id="doctora">
     <div class="wrap">
-      <div data-reveal="zoom" class="ph has-img"><img class="photo" src="../img/p3-doctora-860.webp" srcset="../img/p3-doctora-480.webp 480w, ../img/p3-doctora-860.webp 860w" sizes="(max-width: 960px) 100vw, 429px" width="860" height="962" alt="Foto de muestra: retrato de la doctora con bata blanca, de gesto cercano y sereno" loading="lazy" decoding="async" style="object-position:center 25%"></div>
+      <div data-reveal="zoom" class="ph has-img"><img class="photo" src="../img/p3-doctora-860.webp" srcset="../img/p3-doctora-480.webp 480w, ../img/p3-doctora-860.webp 860w" sizes="(max-width: 960px) 100vw, 429px" width="860" height="962" alt="Foto de muestra: la doctora sonriendo en su consulta, sosteniendo una lente de exploración ante un ojo" loading="lazy" decoding="async" style="object-position:center 25%"></div>
       <div data-reveal class="doctor-text">
         <span class="kicker">Sobre mí</span>
         <h2>Dra. Katia Sotelo</h2>
-        <p class="lead">Médica oftalmóloga especializada en cirugía de cataratas y de párpados. [Aquí irá un resumen de su formación y experiencia.]</p>
+        <p class="lead">Médica oftalmóloga especializada en cirugía de cataratas y de párpados. Atiendo a cada paciente de forma personal, desde la primera revisión hasta su recuperación completa.</p>
         <ul class="facts">
-          <li><strong>Formación</strong><span>[Licenciatura, especialidad MIR y hospital]</span></li>
-          <li><strong>Experiencia</strong><span>[Hospitales y clínicas]</span></li>
-          <li><strong>Sociedades</strong><span>[Sociedades médicas]</span></li>
-          <li><strong>Colegiada</strong><span>Nº [——]</span></li>
+          <li><strong>Formación</strong><span>Licenciatura en Medicina y especialidad en Oftalmología</span></li>
+          <li><strong>Experiencia</strong><span>Hospital Universitario de Barcelona</span></li>
+          <li><strong>Sociedades</strong><span>Sociedad Española de Oftalmología</span></li>
+          <li><strong>Colegiada</strong><span>Nº 08/00000</span></li>
         </ul>
       </div>
     </div>
@@ -378,10 +392,10 @@ footer a{color:#C3D2E3}
         <span class="kicker">Pedir cita</span>
         <h2>Reserve su cita</h2>
         <p class="lead">Elija día y hora online. Si lo prefiere, llámenos y le atendemos personalmente.</p>
-        <a class="call" href="tel:+34000000000"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3.5h3l1.5 4-2 1.3a11 11 0 0 0 6.1 6.1l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z" stroke="#FFFFFF" stroke-width="1.7" stroke-linejoin="round"/></svg>Llamar: [teléfono]</a>
+        <a class="call" href="tel:+34600000000"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3.5h3l1.5 4-2 1.3a11 11 0 0 0 6.1 6.1l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z" stroke="#FFFFFF" stroke-width="1.7" stroke-linejoin="round"/></svg>Llamar: 600 000 000</a>
         <div class="centres">
-          <div class="centre"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex:none"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 1 1 13 0c0 5.4-6.5 11-6.5 11Z" stroke="#215A91" stroke-width="1.7"/><circle cx="12" cy="10" r="2.4" stroke="#215A91" stroke-width="1.7"/></svg><div><strong>[Nombre del centro 1]</strong><br><span style="color:var(--muted)">[Dirección, población]</span> · <a href="#cita">Cómo llegar</a></div></div>
-          <div class="centre"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex:none"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 1 1 13 0c0 5.4-6.5 11-6.5 11Z" stroke="#215A91" stroke-width="1.7"/><circle cx="12" cy="10" r="2.4" stroke="#215A91" stroke-width="1.7"/></svg><div><strong>[Nombre del centro 2]</strong><br><span style="color:var(--muted)">[Dirección, población]</span> · <a href="#cita">Cómo llegar</a></div></div>
+          <div class="centre"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex:none"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 1 1 13 0c0 5.4-6.5 11-6.5 11Z" stroke="#215A91" stroke-width="1.7"/><circle cx="12" cy="10" r="2.4" stroke="#215A91" stroke-width="1.7"/></svg><div><strong>Centro Médico Barcelona</strong><br><span style="color:var(--muted)">Calle Ejemplo, 10 · Barcelona</span> · <a href="#cita">Cómo llegar</a></div></div>
+          <div class="centre"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex:none"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 1 1 13 0c0 5.4-6.5 11-6.5 11Z" stroke="#215A91" stroke-width="1.7"/><circle cx="12" cy="10" r="2.4" stroke="#215A91" stroke-width="1.7"/></svg><div><strong>Clínica Oftalmológica Sant Cugat</strong><br><span style="color:var(--muted)">Avenida Ejemplo, 25 · Sant Cugat del Vallès</span> · <a href="#cita">Cómo llegar</a></div></div>
         </div>
       </div>
       <div data-reveal="1" class="widget">
@@ -397,13 +411,18 @@ footer a{color:#C3D2E3}
 <footer>
   <div class="wrap">
     <div class="foot-col" style="max-width:340px"><h2>Dra. Katia Sotelo</h2><span>Médica oftalmóloga especializada en cirugía de cataratas y de párpados.</span></div>
-    <div class="foot-col"><h2>Contacto</h2><span>Tel. / WhatsApp: [teléfono]</span><span>[email]</span></div>
+    <div class="foot-col"><h2>Contacto</h2><span>Tel. / WhatsApp: 600 000 000</span><span>consulta@drakatiasotelo.com</span></div>
     <div class="legal">
-      <span>Nº de colegiada [——] · Nº de registro sanitario [——]</span>
+      <span>Nº de colegiada 08/00000 · Nº de registro sanitario 00000</span>
       <nav aria-label="Enlaces legales"><a href="#inicio">Aviso legal</a><a href="#inicio">Privacidad</a><a href="#inicio">Cookies</a></nav>
     </div>
   </div>
 </footer>
+
+<nav class="mbar" aria-label="Acciones rápidas">
+  <a class="m-cita" href="#cita"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 10h17M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Pedir cita</a>
+  <a class="m-call" href="tel:+34600000000"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3.5h3l1.5 4-2 1.3a11 11 0 0 0 6.1 6.1l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Llamar</a>
+</nav>
 <script>
 (function(){
   var d=document,b=d.querySelector('.nav-toggle'),n=d.getElementById('site-nav');
