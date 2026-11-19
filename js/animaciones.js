@@ -102,6 +102,16 @@
     io.observe(el);
   });
 
+  /* Dibujos de una sola vez: [data-draw] recibe .is-drawn al entrar en pantalla y ya no se vuelve a observar. */
+  var drawIo = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      drawIo.unobserve(e.target);
+      e.target.classList.add('is-drawn');
+    });
+  }, { threshold: 0.15 });
+  [].slice.call(d.querySelectorAll('[data-draw]')).forEach(function (el) { drawIo.observe(el); });
+
   /* Si el usuario activa "reducir movimiento" a mitad de visita, se muestra todo. */
   function revealAll() {
     h.classList.add('no-anim');

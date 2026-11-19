@@ -163,28 +163,28 @@ footer nav[aria-label="Páginas"]{gap:0!important}
   html.js:not(.no-anim) [data-reveal="zoom"].is-in img{transform:none}
 }
 
-/* Proceso: pasos conectados */
-.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:#1C3530;border:1px solid #33504A;border-radius:12px;overflow:hidden}
-.step{--pad:36px;padding:40px var(--pad);display:flex;flex-direction:column;gap:14px;position:relative}
-.step .ic{color:#D2B08C;flex:none}
-.step .rail{display:flex;align-items:center;margin:0 calc(var(--pad) * -1)}
-.step .rail::before{content:"";flex:0 0 calc(var(--pad) - 14px);height:2px;border-radius:2px;background:rgba(210,176,140,.5)}
-.step .rail::after{content:"";flex:1;height:2px;border-radius:2px;background:rgba(210,176,140,.5)}
-.step:first-child .rail::before,.step:last-child .rail::after{background:transparent}
-.step .num{margin:0 14px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:700;font-size:32px;line-height:1;color:#D2B08C}
-.step p{font-size:15px;line-height:1.7;color:#BFCFC8;margin:0}
+
+/* Proceso: foto + cita + tres pasos */
+.proc{display:grid;grid-template-columns:2fr 3fr;gap:72px;align-items:start}
+.proc-photo{aspect-ratio:3/4;overflow:hidden;position:relative;background:#33504A;border-radius:6px;}
+.proc-photo img{display:block;width:100%;height:100%;object-fit:cover;}
+.proc-quote{margin:0 0 36px;font-style:italic;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:500;font-size:clamp(20px,2.2vw,26px);line-height:1.45;letter-spacing:-.01em;color:#FAF6F0}
+.proc-steps{list-style:none;margin:0;padding:0}
+.proc-step{position:relative;padding:30px 0 34px}
+.proc-step::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:rgba(210,176,140,.55)}
+.proc-step h3{margin:0 0 12px;display:flex;align-items:baseline;gap:14px;font-size:20px;color:#FFFFFF}
+.proc-step h3 .n{color:#D2B08C;font-weight:700;min-width:1.2ch}
+.proc-step p{margin:0;font-size:16px;line-height:1.7;color:#BFCFC8}
+.proc-cta{margin-top:8px}
 @media (max-width:900px){
-  .steps{grid-template-columns:1fr}
-  .step{--pad:24px;display:grid;grid-template-columns:44px 1fr;column-gap:16px;row-gap:10px;align-items:center;padding:32px var(--pad)}
-  .step .ic{grid-column:2;grid-row:1;justify-self:start}
-  .step .rail{display:block;margin:0;grid-column:1;grid-row:1;justify-self:center}
-  .step .rail::before,.step .rail::after{display:none}
-  .step .num{display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin:0;border:2px solid rgba(210,176,140,.6);border-radius:50%;background:#1C3530;font-size:17px;position:relative;z-index:1}
-  .step h3{grid-column:2;grid-row:2;align-self:start}
-  .step p{grid-column:2;grid-row:3;align-self:start}
-  .step::before{content:"";position:absolute;left:calc(var(--pad) + 21px);width:2px;top:0;bottom:0;background:rgba(210,176,140,.5)}
-  .step:first-child::before{top:54px}
-  .step:last-child::before{bottom:auto;height:54px}
+  .proc{grid-template-columns:1fr;gap:36px}
+  .proc-quote{margin-bottom:24px}
+  .proc-step{padding:26px 0 28px}
+  .proc-cta .btn,.proc-cta a{width:100%;box-sizing:border-box;justify-content:center}
+}
+@media (prefers-reduced-motion:no-preference){
+  html.js:not(.no-anim) .proc-step::before{transform:scaleX(0);transform-origin:left center;transition:transform 1s cubic-bezier(.22,.61,.36,1) calc(.3s + var(--i,0) * .5s)}
+  html.js:not(.no-anim) .proc.is-drawn .proc-step::before{transform:none}
 }
 </style>
 </head>
@@ -305,8 +305,7 @@ footer nav[aria-label="Páginas"]{gap:0!important}
         </div>
         <p style="font-size: 17px; line-height: 1.7; color: #BFCFC8; max-width: 420px;">Cada cirugía se planifica de forma individual y se realiza en Clínica Oftalmológica Sant Cugat, con todas las garantías.</p>
       </div>
-      <ol class="steps" data-stagger aria-label="Pasos del proceso" style="list-style:none;margin:0;padding:0"><div class="step"><svg class="ic" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5.5 5.5"/></svg><div class="rail"><span class="num">I</span></div><h3 style="color: #FFFFFF;">Diagnóstico preciso</h3><p>Pruebas completas antes de indicar cualquier cirugía.</p></div><div class="step"><svg class="ic" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg><div class="rail"><span class="num">II</span></div><h3 style="color: #FFFFFF;">Información clara</h3><p>Te explico la técnica, los resultados esperables y los riesgos antes de decidir.</p></div><div class="step"><svg class="ic" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4M9 15l2 2 4-4"/></svg><div class="rail"><span class="num">III</span></div><h3 style="color: #FFFFFF;">Seguimiento personal</h3><p>Las revisiones después de la cirugía las hago yo misma.</p></div></ol>
-      <div data-reveal><a class="cta btn1" href="#cita" style="display: inline-flex; align-items: center; gap: 8px; background: #FAF6F0; color: #24413A; text-decoration: none; padding: 13px 24px; border-radius: 6px; font-weight: 600; min-height: 48px; box-sizing: border-box;">Pedir cita</a></div>
+      <div class="proc" data-draw><div class="proc-photo"><img src="../img/p1-doctora-hero-1080.webp" srcset="../img/p1-doctora-hero-560.webp 560w, ../img/p1-doctora-hero-1080.webp 1080w" sizes="(max-width: 900px) 100vw, 40vw" width="1080" height="1500" alt="Foto de muestra: la doctora en su consulta, sonriendo con bata blanca" loading="lazy" decoding="async" style="object-position:center 20%"></div><div class="proc-body"><blockquote class="proc-quote">“Mi compromiso es que entiendas tu diagnóstico y llegues a la cirugía con total confianza.”</blockquote><ol class="proc-steps"><li class="proc-step" style="--i:0"><h3><span class="n">1</span><span>Diagnóstico preciso</span></h3><p>Empiezo con una exploración completa: agudeza visual, presión ocular y revisión del cristalino y del fondo de ojo con lámpara de hendidura. Con esas pruebas sabemos qué le pasa a tu ojo y por qué, antes de hablar de operar.</p></li><li class="proc-step" style="--i:1"><h3><span class="n">2</span><span>Información clara</span></h3><p>Te explico con calma qué técnica propongo, qué resultado puedes esperar y cuáles son los riesgos reales, con palabras sencillas. Decides tú, sin prisas, y resolvemos todas tus dudas antes de fijar la fecha.</p></li><li class="proc-step" style="--i:2"><h3><span class="n">3</span><span>Seguimiento personal</span></h3><p>Después de la cirugía te reviso yo misma al día siguiente, a la semana y al mes. Compruebo cómo cicatriza el ojo, ajustamos las gotas y la graduación, y puedes escribirnos ante cualquier molestia.</p></li></ol><div class="proc-cta"><a class="cta btn1 btn" href="#cita" style="display: inline-flex; align-items: center; gap: 8px; background: #FAF6F0; color: #24413A; text-decoration: none; padding: 13px 24px; border-radius: 6px; font-weight: 600; min-height: 48px; box-sizing: border-box;">Pedir cita</a></div></div></div>
     </div>
   </section>
 
